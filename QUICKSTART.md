@@ -2,7 +2,7 @@
 
 Welcome to **Black Hole GPU** - a real-time black hole ray tracer with scientifically accurate physics!
 
-## 🚀 Getting Started in 5 Minutes
+##  Getting Started in 5 Minutes
 
 ### Prerequisites
 - macOS 11.0 (Big Sur) or later

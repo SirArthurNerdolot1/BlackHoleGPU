@@ -2,7 +2,7 @@
 
 A real-time, scientifically accurate black hole visualization using GPU-accelerated ray tracing on macOS with Metal.
 
-![Black Hole Rendering](screenshot.png)
+![Black Hole Rendering](image.png)
 
 ## Features
 

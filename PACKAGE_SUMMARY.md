@@ -233,11 +233,11 @@ The app bundle in `build/Debug/BlackHole.app` is a complete, standalone macOS ap
 
 Black Hole GPU is now a **production-ready, professionally documented** macOS application that:
 
-✅ **Works perfectly** - All features functional, stable performance  
-✅ **Looks professional** - Clean code, comprehensive documentation  
-✅ **Scientifically accurate** - Based on peer-reviewed physics  
-✅ **Easy to maintain** - Clear structure, well-commented code  
-✅ **Ready to share** - Licensed, documented, packaged  
+ **Works perfectly** - All features functional, stable performance  
+ **Looks professional** - Clean code, comprehensive documentation  
+ **Scientifically accurate** - Based on peer-reviewed physics  
+ **Easy to maintain** - Clear structure, well-commented code  
+ **Ready to share** - Licensed, documented, packaged  
 
 The project demonstrates excellence in:
 - Scientific computing and GPU programming
