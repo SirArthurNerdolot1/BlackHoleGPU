@@ -12,7 +12,7 @@ Thank you for your interest in contributing to Black Hole GPU! This document pro
 
 1. **Fork the repository**
    ```bash
-   git clone https://github.com/yourusername/BlackHoleGPU.git
+   git https://github.com/SirArthurNerdolot1/BlackHoleGPU.git
    cd BlackHoleGPU
    ```
 
@@ -223,4 +223,4 @@ Contributors will be acknowledged in:
 - Project README
 - Release notes for significant contributions
 
-Thank you for making Black Hole GPU better! 🚀
+Thank you for making Black Hole GPU better! 

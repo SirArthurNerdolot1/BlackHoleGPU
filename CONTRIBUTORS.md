@@ -77,4 +77,4 @@ Contributors who make significant improvements to the project will be recognized
 
 ---
 
-*Last updated: January 2025*
+*Last updated: October 2025*
