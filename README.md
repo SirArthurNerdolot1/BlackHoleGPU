@@ -56,7 +56,7 @@ A real-time, scientifically accurate black hole visualization using GPU-accelera
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/BlackHoleGPU.git
+git clone https://github.com/SirArthurNerdolot1/BlackHoleGPU.git
 cd BlackHoleGPU
 
 # Create build directory
