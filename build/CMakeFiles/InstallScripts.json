@@ -1,0 +1,10 @@
+{
+	"InstallScripts" : 
+	[
+		"/Users/kanishksharma/Downloads/BlackHoleGPU/build/cmake_install.cmake",
+		"/Users/kanishksharma/Downloads/BlackHoleGPU/build/vendor/glfw/cmake_install.cmake",
+		"/Users/kanishksharma/Downloads/BlackHoleGPU/build/vendor/glfw/src/cmake_install.cmake",
+		"/Users/kanishksharma/Downloads/BlackHoleGPU/build/vendor/glfw/docs/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

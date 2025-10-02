@@ -1,0 +1,12 @@
+/Users/kanishksharma/Downloads/BlackHoleGPU/build/CMakeFiles/BlackHole.dir
+/Users/kanishksharma/Downloads/BlackHoleGPU/build/CMakeFiles/install.dir
+/Users/kanishksharma/Downloads/BlackHoleGPU/build/CMakeFiles/ALL_BUILD.dir
+/Users/kanishksharma/Downloads/BlackHoleGPU/build/CMakeFiles/ZERO_CHECK.dir
+/Users/kanishksharma/Downloads/BlackHoleGPU/build/vendor/glfw/CMakeFiles/uninstall.dir
+/Users/kanishksharma/Downloads/BlackHoleGPU/build/vendor/glfw/CMakeFiles/install.dir
+/Users/kanishksharma/Downloads/BlackHoleGPU/build/vendor/glfw/CMakeFiles/ALL_BUILD.dir
+/Users/kanishksharma/Downloads/BlackHoleGPU/build/vendor/glfw/CMakeFiles/ZERO_CHECK.dir
+/Users/kanishksharma/Downloads/BlackHoleGPU/build/vendor/glfw/src/CMakeFiles/glfw.dir
+/Users/kanishksharma/Downloads/BlackHoleGPU/build/vendor/glfw/src/CMakeFiles/update_mappings.dir
+/Users/kanishksharma/Downloads/BlackHoleGPU/build/vendor/glfw/src/CMakeFiles/install.dir
+/Users/kanishksharma/Downloads/BlackHoleGPU/build/vendor/glfw/docs/CMakeFiles/install.dir
