@@ -74,7 +74,7 @@ public:
      * - Render ImGui controls and overlays
      * - Present frame to screen
      * 
-     * Performance: Typically 9-10 FPS at 1280x720 on integrated GPU
+     * Performance: Adaptive based on quality preset (15-60+ FPS possible)
      */
     void draw();
 
@@ -86,4 +86,27 @@ private:
     void* _pMetalLayer;             // CAMetalLayer* - drawable presentation layer
 
     Uniforms _uniforms;             // Shared GPU/CPU uniform buffer (see ShaderTypes.h)
+    
+    // Performance tracking
+    double _lastFrameTime;          // Time of last frame for FPS calculation
+    float _currentFPS;              // Current frames per second
+    float _frameTimeMs;             // Frame time in milliseconds
+    
+    // Recording state
+    bool _isRecording;              // Currently recording video
+    void* _videoWriter;             // AVAssetWriter* for video encoding
+    void* _videoInput;              // AVAssetWriterInput* for frame data
+    void* _pixelBufferAdaptor;      // AVAssetWriterInputPixelBufferAdaptor*
+    int _recordedFrames;            // Number of frames captured
+    
+    // GUI state
+    int _currentTab;                // Active GUI tab (0=Physics, 1=Visual, 2=Camera, 3=Recording)
+    int _currentPreset;             // Selected quality preset
+    
+    // Helper methods
+    void updatePerformanceMetrics();
+    void applyQualityPreset(int preset);
+    void startRecording(const char* filename);
+    void stopRecording();
+    void captureFrame();
 };

@@ -116,6 +116,12 @@ struct Uniforms {
     // Background star effects
     bool background_redshift;
     bool background_doppler;
+    
+    // Performance parameters
+    int quality_preset;
+    int max_iterations;
+    float step_size;
+    bool adaptive_stepping;
 };
 
 //==============================================================================
@@ -246,7 +252,6 @@ float3 toSpherical(float3 pos) {
  */
 float4 getBlackBodyColor(float temp) {
     temp = clamp(temp, 1000.0, 40000.0);
-    float x_coord = (temp - 1000.0) / TEMP_RANGE;
     
     // Simplified blackbody approximation
     float3 color;
@@ -510,7 +515,7 @@ float3 applyBackgroundRedshift(float3 color, float3 pos) {
     return color * float3(1.0, factor, factor * factor);
 }
 
-// Complete ray marching from repository with all physics
+// Complete ray marching with adaptive performance optimization
 float4 rayMarch(float3 pos, float3 dir, float time, constant Uniforms& uniforms) {
     float4 color = float4(0.0);
     float alpha = 1.0;
@@ -518,12 +523,26 @@ float4 rayMarch(float3 pos, float3 dir, float time, constant Uniforms& uniforms)
     // Calculate angular momentum (critical for proper orbits)
     float3 h = cross(pos, dir);
     float h2 = dot(h, h);
+    
+    // Use performance parameters for adaptive quality
+    int maxSteps = uniforms.max_iterations;
+    float stepSize = uniforms.step_size;
 
-    for (int i = 0; i < iteration; ++i) {
-        // Use RK4 integration for maximum accuracy (as in repository)
-        rk4(pos, h2, dir, steps, uniforms.gravity);
+    for (int i = 0; i < maxSteps; ++i) {
+        // Adaptive step size based on curvature (optional performance feature)
+        float currentStepSize = stepSize;
+        if (uniforms.adaptive_stepping) {
+            float r = length(pos);
+            // Reduce step size near event horizon where curvature is extreme
+            if (r < 3.0) {
+                currentStepSize = stepSize * (r / 3.0);
+            }
+        }
+        
+        // Use RK4 integration for maximum accuracy
+        rk4(pos, h2, dir, currentStepSize, uniforms.gravity);
 
-        // Check if ray hit event horizon
+        // Check if ray hit event horizon (early termination)
         if (dot(pos, pos) < 1.0) {
             return color;  // Return accumulated color at event horizon
         }
@@ -531,18 +550,18 @@ float4 rayMarch(float3 pos, float3 dir, float time, constant Uniforms& uniforms)
         // Render accretion disk with full physics
         diskRender(pos, color, alpha, dir, time, uniforms);
         
-        // Early exit if pixel is opaque enough
+        // Early exit if pixel is opaque enough (performance optimization)
         if (alpha < 0.01) {
             break;
         }
         
-        // Early exit if ray goes too far
+        // Early exit if ray goes too far (performance optimization)
         if (length(pos) > 100.0) {
             break;
         }
     }
 
-    // Add background starfield (repository uses cubemap texture)
+    // Add background starfield
     float3 skyColor = float3(0.005, 0.01, 0.02);
     
     // Add some procedural stars
@@ -551,7 +570,6 @@ float4 rayMarch(float3 pos, float3 dir, float time, constant Uniforms& uniforms)
         float3 starColor = float3(0.8, 0.9, 1.0) * (starNoise - 0.8) * 5.0;
         
         // Apply redshift to background stars based on ray path
-        // Stars appear redshifted if ray passed near black hole
         if (length(pos) < 20.0) {
             starColor = applyBackgroundRedshift(starColor, pos);
         }

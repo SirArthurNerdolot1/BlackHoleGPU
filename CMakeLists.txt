@@ -46,6 +46,9 @@ find_library(METAL_LIB Metal)
 find_library(FOUNDATION_LIB Foundation)
 find_library(QUARTZCORE_LIB QuartzCore)
 find_library(GAME_CONTROLLER_LIB GameController)
+find_library(AVFOUNDATION_LIB AVFoundation)
+find_library(COREMEDIA_LIB CoreMedia)
+find_library(COREVIDEO_LIB CoreVideo)
 
 target_link_libraries(BlackHole PUBLIC
     glfw            # Link our compiled GLFW library
@@ -53,6 +56,9 @@ target_link_libraries(BlackHole PUBLIC
     ${FOUNDATION_LIB}
     ${QUARTZCORE_LIB}
     ${GAME_CONTROLLER_LIB}
+    ${AVFOUNDATION_LIB}
+    ${COREMEDIA_LIB}
+    ${COREVIDEO_LIB}
 )
 
 # --- Handle Metal Shaders ---

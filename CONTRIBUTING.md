@@ -161,7 +161,7 @@ When contributing physics-related changes:
 
 4. **After merge**
    - Delete your feature branch
-   - Celebrate! 🎉
+   - Celebrate!
 
 ## Reporting Bugs
 

@@ -9,7 +9,7 @@
 /* Begin PBXAggregateTarget section */
 		03E46ABF405EC8C9F03365FE /* ZERO_CHECK */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = ED0E6B234F20405887011064 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+			buildConfigurationList = D78F6188C8F240C9ADDCE015 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
 			buildPhases = (
 				CBC4D683622C3399DA25971B /* Generate CMakeFiles/ZERO_CHECK */,
 			);
@@ -20,33 +20,33 @@
 		};
 		31D8C687F78532DBD9C48FBB /* ALL_BUILD */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = 9188991AAC064BE8B188CF1E /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+			buildConfigurationList = D096025FBBFB4E94A4F42112 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
 			buildPhases = (
 				26C13E7843E16E0642E499F7 /* Generate CMakeFiles/ALL_BUILD */,
 			);
 			dependencies = (
-				78249483A3654CBCA7A7138C /* PBXTargetDependency */,
-				1B00B22087B34EB28135AE1E /* PBXTargetDependency */,
-				712CB4C75D4A40F59377D7B3 /* PBXTargetDependency */,
+				F741511DE05E4B1FA5A72EA4 /* PBXTargetDependency */,
+				2369557E7E8244A6A5FEAC79 /* PBXTargetDependency */,
+				DBC67ED3EACA47F5BBD65F6A /* PBXTargetDependency */,
 			);
 			name = ALL_BUILD;
 			productName = ALL_BUILD;
 		};
 		440270E6C8B52591F45D232B /* install */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = 8DE4AB9928A8486F80EF31F5 /* Build configuration list for PBXAggregateTarget "install" */;
+			buildConfigurationList = 1EDCEBE2D3F245AE8BB48F0F /* Build configuration list for PBXAggregateTarget "install" */;
 			buildPhases = (
 				93426DA6A4AC2C2AC9CE883C /* CMake PostBuild Rules */,
 			);
 			dependencies = (
-				8EB79504EDE64F5EA58ECF2D /* PBXTargetDependency */,
+				978BFBE210F34880B5A2DBF9 /* PBXTargetDependency */,
 			);
 			name = install;
 			productName = install;
 		};
 		D036D6350D4117D6A589FC58 /* update_mappings */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = F9645D2C8637402AA39A2970 /* Build configuration list for PBXAggregateTarget "update_mappings" */;
+			buildConfigurationList = 069A6CCFD59F4E45B18CE0F2 /* Build configuration list for PBXAggregateTarget "update_mappings" */;
 			buildPhases = (
 				4F180548B842EA254AAB5489 /* Generate vendor/glfw/src/CMakeFiles/update_mappings */,
 			);
@@ -57,7 +57,7 @@
 		};
 		D27B440817759BFBAB52F969 /* uninstall */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = BF4B359687024A5A8345A519 /* Build configuration list for PBXAggregateTarget "uninstall" */;
+			buildConfigurationList = D6C0A83731264F03A36F26CA /* Build configuration list for PBXAggregateTarget "uninstall" */;
 			buildPhases = (
 				C63B55B9DE9E98C81CF05979 /* Generate vendor/glfw/CMakeFiles/uninstall */,
 			);
@@ -69,199 +69,205 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		05119223D7994C7C9515236F /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/mappings.h */ = {isa = PBXBuildFile; fileRef = 6DEFF68506384F3AB0A1B4AF /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/mappings.h */; };
-		058E1E8238A840188DFCCC18 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/platform.c */ = {isa = PBXBuildFile; fileRef = 317DC0D007234959830C0E25 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/platform.c */; };
-		0FD1D0C378AF488DACCA354B /* /Users/kanishksharma/Downloads/BlackHoleGPU/build/CMakeFiles/BlackHole.dir/Info.plist */ = {isa = PBXBuildFile; fileRef = 8202EFFB76284EC5BC82E8F6 /* /Users/kanishksharma/Downloads/BlackHoleGPU/build/CMakeFiles/BlackHole.dir/Info.plist */; };
-		1AE0C4FAEC894616A694F658 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/null_window.c */ = {isa = PBXBuildFile; fileRef = 851677501CBC44A3875CBF75 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/null_window.c */; };
-		2437A7A1581049498BDF9908 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/include/GLFW/glfw3native.h */ = {isa = PBXBuildFile; fileRef = 60FFD537E90C45928BF69EC8 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/include/GLFW/glfw3native.h */; };
-		2F432BBB3DE74F24B488DDC9 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/input.c */ = {isa = PBXBuildFile; fileRef = 6477D482475F4426ABECDC43 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/input.c */; };
-		2F44FA0B0DF94702B074708D /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/cocoa_init.m */ = {isa = PBXBuildFile; fileRef = 0B0762B22F604B94A1BECA95 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/cocoa_init.m */; };
-		33568309CFE44F67AA7ABA6C /* /Users/kanishksharma/Downloads/BlackHoleGPU/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = D2A3826500234DAB82F90542 /* /Users/kanishksharma/Downloads/BlackHoleGPU/CMakeLists.txt */; };
-		3B79B707781A42B594CF3671 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/null_platform.h */ = {isa = PBXBuildFile; fileRef = 641C49D860F04064AB794179 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/null_platform.h */; };
-		40DB4766622948FF98E638F7 /* /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.0.sdk/System/Library/Frameworks/QuartzCore.framework */ = {isa = PBXBuildFile; fileRef = E0689A32CEB340D9A29691F2 /* /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.0.sdk/System/Library/Frameworks/QuartzCore.framework */; };
-		47D2BBE2D1684FA3AF87EE7C /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/cocoa_monitor.m */ = {isa = PBXBuildFile; fileRef = B6815C8D86AB4EBFB1D562BC /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/cocoa_monitor.m */; };
-		512B545871DC4C2FA68CD71F /* /Users/kanishksharma/Downloads/BlackHoleGPU/shaders/BlackHole.metal */ = {isa = PBXBuildFile; fileRef = 900BBFB7F1EC48F2AA6C0AA9 /* /Users/kanishksharma/Downloads/BlackHoleGPU/shaders/BlackHole.metal */; settings = {COMPILER_FLAGS = "-I/Users/kanishksharma/Downloads/BlackHoleGPU/src"; }; };
-		54C900AD5CFD47BD926BC6C4 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/platform.h */ = {isa = PBXBuildFile; fileRef = E705ACE5593F457B98ED07A5 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/platform.h */; };
-		57CB8710D570404F95F60399 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/imgui/imgui_tables.cpp */ = {isa = PBXBuildFile; fileRef = 999EBD9EBC464587B68AA987 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/imgui/imgui_tables.cpp */; };
-		5AC3E7A6159040C0815210E2 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/imgui/backends/imgui_impl_metal.mm */ = {isa = PBXBuildFile; fileRef = 80FF364B48D64F9388EA6297 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/imgui/backends/imgui_impl_metal.mm */; };
-		5E6F0435262345A5B31022BF /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/posix_thread.c */ = {isa = PBXBuildFile; fileRef = A05D2F6118D549D1BC7C7FD4 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/posix_thread.c */; };
-		5FA4B11E447147C7906C51B6 /* /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.0.sdk/System/Library/Frameworks/GameController.framework */ = {isa = PBXBuildFile; fileRef = BC3362ECA03141FF99046472 /* /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.0.sdk/System/Library/Frameworks/GameController.framework */; };
-		6B4F761EF5D14860A1A06A27 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 68874D1EEBA6472E9925C2A9 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/CMakeLists.txt */; };
-		72D1096F7AD0466684854735 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/cocoa_time.h */ = {isa = PBXBuildFile; fileRef = 8335E89B708743BD91B97E62 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/cocoa_time.h */; };
-		77C84AB02B9F424F83B29B94 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/context.c */ = {isa = PBXBuildFile; fileRef = 4CB32A23C3C2489AB1A73BC2 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/context.c */; };
-		7E22C84B31EC49598BB53401 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/cocoa_joystick.m */ = {isa = PBXBuildFile; fileRef = 1490C94E7B574BAF870F0782 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/cocoa_joystick.m */; };
-		9026DECFF09B4CDE817FC4BA /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/init.c */ = {isa = PBXBuildFile; fileRef = B2655F3A76C1413E88FEC4D7 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/init.c */; };
-		9262D71D23DB4DADBDFC968A /* /Users/kanishksharma/Downloads/BlackHoleGPU/src/Renderer.mm */ = {isa = PBXBuildFile; fileRef = 0520E09650BE471BAD69881D /* /Users/kanishksharma/Downloads/BlackHoleGPU/src/Renderer.mm */; };
-		935382DC7EB741C9A6B1EAF9 /* /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.0.sdk/System/Library/Frameworks/Metal.framework */ = {isa = PBXBuildFile; fileRef = 23511D9B97264A9B925BF81B /* /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.0.sdk/System/Library/Frameworks/Metal.framework */; };
-		9D2C38F50BA94B82A17EE198 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/imgui/backends/imgui_impl_glfw.cpp */ = {isa = PBXBuildFile; fileRef = 7262DCB139FD47FF91F13C63 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/imgui/backends/imgui_impl_glfw.cpp */; };
-		A0EE8BBCD96744EA9A847101 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/cocoa_platform.h */ = {isa = PBXBuildFile; fileRef = 86EA8173838047578758B0E6 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/cocoa_platform.h */; };
-		A675B4C104184BD692A2347F /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/window.c */ = {isa = PBXBuildFile; fileRef = CBB5D6C8A6D9486B83337686 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/window.c */; };
-		A7A6D99A302648EC8D3F1BDF /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/monitor.c */ = {isa = PBXBuildFile; fileRef = 26DB037F14884E02A51A5C36 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/monitor.c */; };
-		A7DCBEA3875A4E58A56D8131 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/null_joystick.c */ = {isa = PBXBuildFile; fileRef = FD90D8A947324F11B8826AE7 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/null_joystick.c */; };
-		A94822C8B5B24A35BB7EBD46 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/egl_context.c */ = {isa = PBXBuildFile; fileRef = 0EFCDD5C979E4001B192AA0F /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/egl_context.c */; };
-		B7A0A20A9D6349F9B8ACEA28 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/null_joystick.h */ = {isa = PBXBuildFile; fileRef = 087731844D6D4F2FBBDE58F4 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/null_joystick.h */; };
-		B92C0EA598FC41EF98FA2BC4 /* /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.0.sdk/System/Library/Frameworks/Foundation.framework */ = {isa = PBXBuildFile; fileRef = CEB6D77352544017B3C0F91D /* /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.0.sdk/System/Library/Frameworks/Foundation.framework */; };
-		BA6A1DAB3216478392BF2F6A /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/imgui/imgui.cpp */ = {isa = PBXBuildFile; fileRef = 243F3D96E0174853897C2EC1 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/imgui/imgui.cpp */; };
-		BB21A3CBEA0F4045A5CCEE2B /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/cocoa_time.c */ = {isa = PBXBuildFile; fileRef = DFCBAB1015524FB88AC689D5 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/cocoa_time.c */; };
-		BCC7C8FA921148FCBB679500 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/null_init.c */ = {isa = PBXBuildFile; fileRef = 81F3F74B40294246BA983122 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/null_init.c */; };
-		C3C1EA9C5FE04088A91A64E6 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/imgui/imgui_draw.cpp */ = {isa = PBXBuildFile; fileRef = 51A5C0ED04DE45C69C661FF6 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/imgui/imgui_draw.cpp */; };
-		CB7CC93F54B8467DB7524665 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/include/GLFW/glfw3.h */ = {isa = PBXBuildFile; fileRef = DB4881F4436044949D5412EC /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/include/GLFW/glfw3.h */; };
-		D50AAA5B1B5F4DE5B4D5586E /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/internal.h */ = {isa = PBXBuildFile; fileRef = 797AA64BF9244AA690F20DF8 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/internal.h */; };
-		E7C37F90BC12451D8FF4D2BF /* /Users/kanishksharma/Downloads/BlackHoleGPU/src/main.cpp */ = {isa = PBXBuildFile; fileRef = 8C35BBE2C53E483E83E08095 /* /Users/kanishksharma/Downloads/BlackHoleGPU/src/main.cpp */; };
-		E98C796FA1A74E2589D8902F /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/imgui/imgui_widgets.cpp */ = {isa = PBXBuildFile; fileRef = F29187BB7E154DA58A9A7175 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/imgui/imgui_widgets.cpp */; };
-		EDEDEB4273F74BF995382902 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/posix_module.c */ = {isa = PBXBuildFile; fileRef = 0D27159CC2A04EC49FB0702A /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/posix_module.c */; };
-		F0BE794C8BB04640ADA7AAAF /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/vulkan.c */ = {isa = PBXBuildFile; fileRef = 77060ECE2A1D478CAC0966F5 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/vulkan.c */; };
-		F346D6DE4A514B32BEAFFEDE /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/nsgl_context.m */ = {isa = PBXBuildFile; fileRef = 668E170F54D34ED58C60F8BC /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/nsgl_context.m */; };
-		F60E68B6E7A44812A45A7CA4 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/null_monitor.c */ = {isa = PBXBuildFile; fileRef = ED51487F857144D6B8C9A457 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/null_monitor.c */; };
-		FAA6182BEED0400F85C9B978 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/cocoa_window.m */ = {isa = PBXBuildFile; fileRef = B8B98217184141F8B6023C7A /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/cocoa_window.m */; };
-		FE3F8C28A5CA4D31AAA260D5 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/posix_thread.h */ = {isa = PBXBuildFile; fileRef = 9278677DB77B4D65AEAF75E5 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/posix_thread.h */; };
-		FEDAE75167C940EFA1B43202 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/cocoa_joystick.h */ = {isa = PBXBuildFile; fileRef = 4F88A669D4064196A560FBA3 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/cocoa_joystick.h */; };
-		FFA28C545BF74D0BB727F32C /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/osmesa_context.c */ = {isa = PBXBuildFile; fileRef = 52B3753077CD495AB90F7E46 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/osmesa_context.c */; };
+		0420581772C54C90B9C9389F /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/cocoa_monitor.m */ = {isa = PBXBuildFile; fileRef = 5F86F90C5E8A4753BF7A65A0 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/cocoa_monitor.m */; };
+		0456780749044F4FB8305F2E /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/null_joystick.h */ = {isa = PBXBuildFile; fileRef = 4BA24EAD5B5F4ABE84577896 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/null_joystick.h */; };
+		0F577E5354F049C5955661B1 /* /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.0.sdk/System/Library/Frameworks/AVFoundation.framework */ = {isa = PBXBuildFile; fileRef = 53160DB54C994A699E21D2CB /* /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.0.sdk/System/Library/Frameworks/AVFoundation.framework */; };
+		17DE60FE24F84065AD3C15DF /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/context.c */ = {isa = PBXBuildFile; fileRef = E0341574F0154E1EA754A82C /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/context.c */; };
+		1B05DD811C81437F9E9882DE /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 048E4E0C3E03493D8AB5F206 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/CMakeLists.txt */; };
+		24C4AEA52EBA441D8DF0D6E2 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/null_monitor.c */ = {isa = PBXBuildFile; fileRef = 566D9FB4DB314AFA900C923A /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/null_monitor.c */; };
+		2A47EBBB5F6B48FE8A1227CE /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/nsgl_context.m */ = {isa = PBXBuildFile; fileRef = 15AC7BDA0AD64245A51C4BEA /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/nsgl_context.m */; };
+		300C99A6DBEB4AF1961B5A93 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/platform.c */ = {isa = PBXBuildFile; fileRef = 127AD1E2A6EF40E7B67C2BE9 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/platform.c */; };
+		32029EFB5E81453086B1CC58 /* /Users/kanishksharma/Downloads/BlackHoleGPU/src/main.cpp */ = {isa = PBXBuildFile; fileRef = C90F081D3A7E4870B7188F59 /* /Users/kanishksharma/Downloads/BlackHoleGPU/src/main.cpp */; };
+		349619057D3C4267A7ED542C /* /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.0.sdk/System/Library/Frameworks/CoreVideo.framework */ = {isa = PBXBuildFile; fileRef = BC57733E60FF4FFD9E33C28B /* /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.0.sdk/System/Library/Frameworks/CoreVideo.framework */; };
+		38D7EEB6E8C246C5AB4C210B /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/window.c */ = {isa = PBXBuildFile; fileRef = 0CF8DAAFD5D8403590AA9B46 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/window.c */; };
+		38F06544F0354D78924B9BEC /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/cocoa_time.c */ = {isa = PBXBuildFile; fileRef = B7BFFEDAE1414ED49C7261D5 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/cocoa_time.c */; };
+		39B83E1B0DAB40E092D9C33D /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/null_init.c */ = {isa = PBXBuildFile; fileRef = 15036BD8D6844B5096C86D75 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/null_init.c */; };
+		3B7756CF365346EABE9D5E98 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/init.c */ = {isa = PBXBuildFile; fileRef = 04D6DB2E3922400CAA546856 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/init.c */; };
+		53F9F2B047614711AB9333E3 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/input.c */ = {isa = PBXBuildFile; fileRef = 98DD7436D919406B824E1642 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/input.c */; };
+		6687017BA3024996B12E67AA /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/null_joystick.c */ = {isa = PBXBuildFile; fileRef = AA73C1E8A1D642D3ABB49092 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/null_joystick.c */; };
+		675EB1BECE83436C814CF858 /* /Users/kanishksharma/Downloads/BlackHoleGPU/shaders/BlackHole.metal */ = {isa = PBXBuildFile; fileRef = A69752A7818F40F8B1C1FF87 /* /Users/kanishksharma/Downloads/BlackHoleGPU/shaders/BlackHole.metal */; settings = {COMPILER_FLAGS = "-I/Users/kanishksharma/Downloads/BlackHoleGPU/src"; }; };
+		6E1E1368E45044758D68754A /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/cocoa_window.m */ = {isa = PBXBuildFile; fileRef = 07B3504D11954130B793837B /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/cocoa_window.m */; };
+		6F72301E9F8245CD92C34272 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/imgui/backends/imgui_impl_glfw.cpp */ = {isa = PBXBuildFile; fileRef = B3E9C73B61F3430EA1077ED2 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/imgui/backends/imgui_impl_glfw.cpp */; };
+		7020BD2CCC2146508C842554 /* /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.0.sdk/System/Library/Frameworks/Metal.framework */ = {isa = PBXBuildFile; fileRef = 3879B192C2894935B860689F /* /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.0.sdk/System/Library/Frameworks/Metal.framework */; };
+		7D950E7980144031BA8C1E65 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/mappings.h */ = {isa = PBXBuildFile; fileRef = 45DBE490D783494E965B7199 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/mappings.h */; };
+		7DBC28CACBC049E18B8B0AE7 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/null_platform.h */ = {isa = PBXBuildFile; fileRef = BA59F3274C194ED4B33CA6B0 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/null_platform.h */; };
+		7EEB31B617A64F5295689B31 /* /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.0.sdk/System/Library/Frameworks/Foundation.framework */ = {isa = PBXBuildFile; fileRef = B2EB23F1E5A44CBC84ACB3A2 /* /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.0.sdk/System/Library/Frameworks/Foundation.framework */; };
+		873D3B0BD88B46BE901D1191 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/monitor.c */ = {isa = PBXBuildFile; fileRef = A8B30B6B992D456094D905A8 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/monitor.c */; };
+		8C3F02FC1BC44877921DA199 /* /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.0.sdk/System/Library/Frameworks/QuartzCore.framework */ = {isa = PBXBuildFile; fileRef = D3733FF4153D452C994F676C /* /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.0.sdk/System/Library/Frameworks/QuartzCore.framework */; };
+		8D4BE0A43E1C454B88E7AE8C /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/imgui/imgui.cpp */ = {isa = PBXBuildFile; fileRef = 84122433F8E646CEA6A86F0C /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/imgui/imgui.cpp */; };
+		97DF6FC2AB1D40AEA6C286D4 /* /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.0.sdk/System/Library/Frameworks/GameController.framework */ = {isa = PBXBuildFile; fileRef = FC2376B1B98748E5A64B040A /* /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.0.sdk/System/Library/Frameworks/GameController.framework */; };
+		A0DA46403A8445FC9092EB48 /* /Users/kanishksharma/Downloads/BlackHoleGPU/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 722116F33B2644F1B2E0246A /* /Users/kanishksharma/Downloads/BlackHoleGPU/CMakeLists.txt */; };
+		A3278C01BC6A44F689BC9F8F /* /Users/kanishksharma/Downloads/BlackHoleGPU/build/CMakeFiles/BlackHole.dir/Info.plist */ = {isa = PBXBuildFile; fileRef = B244EEE935B44B12A119F3A0 /* /Users/kanishksharma/Downloads/BlackHoleGPU/build/CMakeFiles/BlackHole.dir/Info.plist */; };
+		AA56E237965B4AADBD93B4EA /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/null_window.c */ = {isa = PBXBuildFile; fileRef = 710BC45A24524BA089D5ACE3 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/null_window.c */; };
+		AEE85B332F484AC6B19D481F /* /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.0.sdk/System/Library/Frameworks/CoreMedia.framework */ = {isa = PBXBuildFile; fileRef = 329A5DD3B1604E0097944774 /* /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.0.sdk/System/Library/Frameworks/CoreMedia.framework */; };
+		AF31823A25F64537BD124B8D /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/imgui/imgui_widgets.cpp */ = {isa = PBXBuildFile; fileRef = E6B31F893C6C4315B25D1523 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/imgui/imgui_widgets.cpp */; };
+		B48F744B6F3C46B2AFDD91FC /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/osmesa_context.c */ = {isa = PBXBuildFile; fileRef = BAFC0311E049461391FB3A12 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/osmesa_context.c */; };
+		B6135127AD8D4DEAB299602F /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/include/GLFW/glfw3.h */ = {isa = PBXBuildFile; fileRef = 1AA9DE1DFD5445B68BEB96D5 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/include/GLFW/glfw3.h */; };
+		B799DA91908C4783A11FA8B0 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/posix_module.c */ = {isa = PBXBuildFile; fileRef = 4A636C2A56BC4D1191CECCEF /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/posix_module.c */; };
+		BA735AB1F12346D6853E171E /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/posix_thread.c */ = {isa = PBXBuildFile; fileRef = 8A1F1C6021864190B52921EB /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/posix_thread.c */; };
+		BBA849E5697242F5BF8620F8 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/platform.h */ = {isa = PBXBuildFile; fileRef = 54E056AEE8724432AC0871BC /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/platform.h */; };
+		C0BB2A66B34F4358837CD456 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/cocoa_time.h */ = {isa = PBXBuildFile; fileRef = 9F3DFFDB860F440D8222D1BF /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/cocoa_time.h */; };
+		C0DE67AE043A492590D67F63 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/cocoa_platform.h */ = {isa = PBXBuildFile; fileRef = D5B89CBC34544690BAC913AA /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/cocoa_platform.h */; };
+		C10F6C2DCADC4F96913EC649 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/imgui/imgui_draw.cpp */ = {isa = PBXBuildFile; fileRef = 6C13B87BF7514059AAE1DA0E /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/imgui/imgui_draw.cpp */; };
+		CAACECE6BF3D4E42803F0E66 /* /Users/kanishksharma/Downloads/BlackHoleGPU/src/Renderer.mm */ = {isa = PBXBuildFile; fileRef = 7FA029588C724866B243F56B /* /Users/kanishksharma/Downloads/BlackHoleGPU/src/Renderer.mm */; };
+		D3BFAC817C8A455D93221983 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/cocoa_joystick.h */ = {isa = PBXBuildFile; fileRef = C403EE91AAD54A24BD757D03 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/cocoa_joystick.h */; };
+		D4EF6166B6C243EC866C61BD /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/internal.h */ = {isa = PBXBuildFile; fileRef = 4ED60948D0394042AFCB75E9 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/internal.h */; };
+		D5B2910B1D1A4D8489A73F1A /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/cocoa_init.m */ = {isa = PBXBuildFile; fileRef = 359E5E7CB06D452C9F22A63F /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/cocoa_init.m */; };
+		D9998A0F58F34BD28ADFD09F /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/vulkan.c */ = {isa = PBXBuildFile; fileRef = 5A5B2E44F33D4CF09AA07971 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/vulkan.c */; };
+		D99B70608566412EAAA0ED27 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/cocoa_joystick.m */ = {isa = PBXBuildFile; fileRef = 075FE4A738F0404B95A7C8A2 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/cocoa_joystick.m */; };
+		E4A2247B7BBF4FE393B76060 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/posix_thread.h */ = {isa = PBXBuildFile; fileRef = 4BE64354E36949E5B58DA10C /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/posix_thread.h */; };
+		EE7ABECE1AF9407293882C16 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/imgui/backends/imgui_impl_metal.mm */ = {isa = PBXBuildFile; fileRef = B826FC559254465484A763EF /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/imgui/backends/imgui_impl_metal.mm */; };
+		F4AB4E0CD04C42F9A78D7360 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/imgui/imgui_tables.cpp */ = {isa = PBXBuildFile; fileRef = 3F89B7A2D72149FDBA7A2229 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/imgui/imgui_tables.cpp */; };
+		F94D7E7304E94EFA86BFE0E8 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/include/GLFW/glfw3native.h */ = {isa = PBXBuildFile; fileRef = 01C4F78BEA324C77965F07A1 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/include/GLFW/glfw3native.h */; };
+		F9B14133CE814E28AF0A49F8 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/egl_context.c */ = {isa = PBXBuildFile; fileRef = 0CBF3FB696ED43069F45872F /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/egl_context.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXBuildStyle section */
-		2005000DA1714C09A6791A8E /* MinSizeRel */ = {
-			isa = PBXBuildStyle;
-			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-			};
-			name = MinSizeRel;
-		};
-		6DF0AFAA80CA4F92BF0C5E1F /* Debug */ = {
-			isa = PBXBuildStyle;
-			buildSettings = {
-				COPY_PHASE_STRIP = NO;
-			};
-			name = Debug;
-		};
-		BC1AEB65C8A24743AD479433 /* RelWithDebInfo */ = {
+		5A1FB4BB939F46C8AF69597A /* RelWithDebInfo */ = {
 			isa = PBXBuildStyle;
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
 			};
 			name = RelWithDebInfo;
 		};
-		CFACE941A1484F96B333BD94 /* Release */ = {
+		9B88D9FB1B104F86958B6073 /* Release */ = {
 			isa = PBXBuildStyle;
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
 			};
 			name = Release;
 		};
+		F6791786B1AD41C59AC948DB /* Debug */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Debug;
+		};
+		FFF88C0D442448E9A1E73F8A /* MinSizeRel */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = MinSizeRel;
+		};
 /* End PBXBuildStyle section */
 
 /* Begin PBXContainerItemProxy section */
-		06D3888131214D40BA044473 /* PBXContainerItemProxy */ = {
+		4DC2BEAEE628406787DA9019 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 8661DE4680F64F20B54DBC72 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 98D0896CA6A911500C67B6D0;
 			remoteInfo = glfw;
 		};
-		283886AC39AF41A78556BF1F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8661DE4680F64F20B54DBC72 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 98D0896CA6A911500C67B6D0;
-			remoteInfo = glfw;
-		};
-		7EE5BF9FC0BC497B8506CE4A /* PBXContainerItemProxy */ = {
+		761B05FF838C4D5991ABF098 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 8661DE4680F64F20B54DBC72 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 03E46ABF405EC8C9F03365FE;
 			remoteInfo = ZERO_CHECK;
 		};
-		AD88BD05B72A45FDA70FD038 /* PBXContainerItemProxy */ = {
+		874D78AFF99B435DAA199661 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 8661DE4680F64F20B54DBC72 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 773E4114B2B4E530F6F7963B;
-			remoteInfo = BlackHole;
+			remoteGlobalIDString = 03E46ABF405EC8C9F03365FE;
+			remoteInfo = ZERO_CHECK;
 		};
-		D545B4A448964F3A89515AE1 /* PBXContainerItemProxy */ = {
+		9F539317A02B4A748CB3C43A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8661DE4680F64F20B54DBC72 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 98D0896CA6A911500C67B6D0;
+			remoteInfo = glfw;
+		};
+		CA2BDDCF50584A01B44BF1BF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 8661DE4680F64F20B54DBC72 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 31D8C687F78532DBD9C48FBB;
 			remoteInfo = ALL_BUILD;
 		};
-		F5CEB6A3EF324280B654A524 /* PBXContainerItemProxy */ = {
+		F3A01CCEA1754F489015F8FF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 8661DE4680F64F20B54DBC72 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 03E46ABF405EC8C9F03365FE;
-			remoteInfo = ZERO_CHECK;
+			remoteGlobalIDString = 773E4114B2B4E530F6F7963B;
+			remoteInfo = BlackHole;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0520E09650BE471BAD69881D /* /Users/kanishksharma/Downloads/BlackHoleGPU/src/Renderer.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = Renderer.mm; path = src/Renderer.mm; sourceTree = SOURCE_ROOT; };
-		087731844D6D4F2FBBDE58F4 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/null_joystick.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = null_joystick.h; path = vendor/glfw/src/null_joystick.h; sourceTree = SOURCE_ROOT; };
-		0B0762B22F604B94A1BECA95 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/cocoa_init.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = cocoa_init.m; path = vendor/glfw/src/cocoa_init.m; sourceTree = SOURCE_ROOT; };
-		0D27159CC2A04EC49FB0702A /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/posix_module.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = posix_module.c; path = vendor/glfw/src/posix_module.c; sourceTree = SOURCE_ROOT; };
-		0EFCDD5C979E4001B192AA0F /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/egl_context.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = egl_context.c; path = vendor/glfw/src/egl_context.c; sourceTree = SOURCE_ROOT; };
-		1490C94E7B574BAF870F0782 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/cocoa_joystick.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = cocoa_joystick.m; path = vendor/glfw/src/cocoa_joystick.m; sourceTree = SOURCE_ROOT; };
-		1EFF042CD6094472B6C57B04 /* glfw */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libglfw3.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		23511D9B97264A9B925BF81B /* /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.0.sdk/System/Library/Frameworks/Metal.framework */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.framework; name = Metal.framework; path = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.0.sdk/System/Library/Frameworks/Metal.framework; sourceTree = "<absolute>"; };
-		243539C4235B422192EF70E4 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/CMake/GenerateMappings.cmake */ = {isa = PBXFileReference; explicitFileType = default; fileEncoding = 4; name = GenerateMappings.cmake; path = vendor/glfw/CMake/GenerateMappings.cmake; sourceTree = SOURCE_ROOT; };
-		243F3D96E0174853897C2EC1 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/imgui/imgui.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = imgui.cpp; path = vendor/imgui/imgui.cpp; sourceTree = SOURCE_ROOT; };
-		26DB037F14884E02A51A5C36 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/monitor.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = monitor.c; path = vendor/glfw/src/monitor.c; sourceTree = SOURCE_ROOT; };
-		2AF1724465B74DF3BC5B2C16 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/mappings.h.in */ = {isa = PBXFileReference; explicitFileType = default; fileEncoding = 4; name = mappings.h.in; path = vendor/glfw/src/mappings.h.in; sourceTree = SOURCE_ROOT; };
-		317DC0D007234959830C0E25 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/platform.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = platform.c; path = vendor/glfw/src/platform.c; sourceTree = SOURCE_ROOT; };
-		4067AA93FEF442509EA7CEC5 /* BlackHole */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = BlackHole; sourceTree = BUILT_PRODUCTS_DIR; };
-		4CB32A23C3C2489AB1A73BC2 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/context.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = context.c; path = vendor/glfw/src/context.c; sourceTree = SOURCE_ROOT; };
-		4F88A669D4064196A560FBA3 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/cocoa_joystick.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = cocoa_joystick.h; path = vendor/glfw/src/cocoa_joystick.h; sourceTree = SOURCE_ROOT; };
-		51A5C0ED04DE45C69C661FF6 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/imgui/imgui_draw.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = imgui_draw.cpp; path = vendor/imgui/imgui_draw.cpp; sourceTree = SOURCE_ROOT; };
-		52B3753077CD495AB90F7E46 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/osmesa_context.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = osmesa_context.c; path = vendor/glfw/src/osmesa_context.c; sourceTree = SOURCE_ROOT; };
-		60FFD537E90C45928BF69EC8 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/include/GLFW/glfw3native.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = glfw3native.h; path = vendor/glfw/include/GLFW/glfw3native.h; sourceTree = SOURCE_ROOT; };
-		641C49D860F04064AB794179 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/null_platform.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = null_platform.h; path = vendor/glfw/src/null_platform.h; sourceTree = SOURCE_ROOT; };
-		6477D482475F4426ABECDC43 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/input.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = input.c; path = vendor/glfw/src/input.c; sourceTree = SOURCE_ROOT; };
-		668E170F54D34ED58C60F8BC /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/nsgl_context.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = nsgl_context.m; path = vendor/glfw/src/nsgl_context.m; sourceTree = SOURCE_ROOT; };
-		68874D1EEBA6472E9925C2A9 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = vendor/glfw/src/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
-		6DEFF68506384F3AB0A1B4AF /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/mappings.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = mappings.h; path = vendor/glfw/src/mappings.h; sourceTree = SOURCE_ROOT; };
-		7262DCB139FD47FF91F13C63 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/imgui/backends/imgui_impl_glfw.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = imgui_impl_glfw.cpp; path = vendor/imgui/backends/imgui_impl_glfw.cpp; sourceTree = SOURCE_ROOT; };
-		77060ECE2A1D478CAC0966F5 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/vulkan.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = vulkan.c; path = vendor/glfw/src/vulkan.c; sourceTree = SOURCE_ROOT; };
-		797AA64BF9244AA690F20DF8 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/internal.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = internal.h; path = vendor/glfw/src/internal.h; sourceTree = SOURCE_ROOT; };
-		80FF364B48D64F9388EA6297 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/imgui/backends/imgui_impl_metal.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = imgui_impl_metal.mm; path = vendor/imgui/backends/imgui_impl_metal.mm; sourceTree = SOURCE_ROOT; };
-		81F3F74B40294246BA983122 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/null_init.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = null_init.c; path = vendor/glfw/src/null_init.c; sourceTree = SOURCE_ROOT; };
-		8202EFFB76284EC5BC82E8F6 /* /Users/kanishksharma/Downloads/BlackHoleGPU/build/CMakeFiles/BlackHole.dir/Info.plist */ = {isa = PBXFileReference; explicitFileType = sourcecode.text.plist; fileEncoding = 4; name = Info.plist; path = build/CMakeFiles/BlackHole.dir/Info.plist; sourceTree = SOURCE_ROOT; };
-		8335E89B708743BD91B97E62 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/cocoa_time.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = cocoa_time.h; path = vendor/glfw/src/cocoa_time.h; sourceTree = SOURCE_ROOT; };
-		851677501CBC44A3875CBF75 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/null_window.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = null_window.c; path = vendor/glfw/src/null_window.c; sourceTree = SOURCE_ROOT; };
-		86EA8173838047578758B0E6 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/cocoa_platform.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = cocoa_platform.h; path = vendor/glfw/src/cocoa_platform.h; sourceTree = SOURCE_ROOT; };
-		8C35BBE2C53E483E83E08095 /* /Users/kanishksharma/Downloads/BlackHoleGPU/src/main.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = main.cpp; path = src/main.cpp; sourceTree = SOURCE_ROOT; };
-		900BBFB7F1EC48F2AA6C0AA9 /* /Users/kanishksharma/Downloads/BlackHoleGPU/shaders/BlackHole.metal */ = {isa = PBXFileReference; explicitFileType = sourcecode.metal; fileEncoding = 4; name = BlackHole.metal; path = shaders/BlackHole.metal; sourceTree = SOURCE_ROOT; };
-		9278677DB77B4D65AEAF75E5 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/posix_thread.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = posix_thread.h; path = vendor/glfw/src/posix_thread.h; sourceTree = SOURCE_ROOT; };
-		999EBD9EBC464587B68AA987 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/imgui/imgui_tables.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = imgui_tables.cpp; path = vendor/imgui/imgui_tables.cpp; sourceTree = SOURCE_ROOT; };
-		A05D2F6118D549D1BC7C7FD4 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/posix_thread.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = posix_thread.c; path = vendor/glfw/src/posix_thread.c; sourceTree = SOURCE_ROOT; };
-		A68A4AD5B90B4F01A683C0A1 /* /Users/kanishksharma/Downloads/BlackHoleGPU/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
-		B2655F3A76C1413E88FEC4D7 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/init.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = init.c; path = vendor/glfw/src/init.c; sourceTree = SOURCE_ROOT; };
-		B6815C8D86AB4EBFB1D562BC /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/cocoa_monitor.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = cocoa_monitor.m; path = vendor/glfw/src/cocoa_monitor.m; sourceTree = SOURCE_ROOT; };
-		B8B98217184141F8B6023C7A /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/cocoa_window.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = cocoa_window.m; path = vendor/glfw/src/cocoa_window.m; sourceTree = SOURCE_ROOT; };
-		BC3362ECA03141FF99046472 /* /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.0.sdk/System/Library/Frameworks/GameController.framework */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.framework; name = GameController.framework; path = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.0.sdk/System/Library/Frameworks/GameController.framework; sourceTree = "<absolute>"; };
-		C14CA65BD919443BAB36FA7D /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = vendor/glfw/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
-		C692501C67114D81B39409C8 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = vendor/glfw/src/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
-		CBB5D6C8A6D9486B83337686 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/window.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = window.c; path = vendor/glfw/src/window.c; sourceTree = SOURCE_ROOT; };
-		CEB6D77352544017B3C0F91D /* /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.0.sdk/System/Library/Frameworks/Foundation.framework */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
-		D2A3826500234DAB82F90542 /* /Users/kanishksharma/Downloads/BlackHoleGPU/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
-		DB4881F4436044949D5412EC /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/include/GLFW/glfw3.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = glfw3.h; path = vendor/glfw/include/GLFW/glfw3.h; sourceTree = SOURCE_ROOT; };
-		DFCBAB1015524FB88AC689D5 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/cocoa_time.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = cocoa_time.c; path = vendor/glfw/src/cocoa_time.c; sourceTree = SOURCE_ROOT; };
-		E0689A32CEB340D9A29691F2 /* /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.0.sdk/System/Library/Frameworks/QuartzCore.framework */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = "<absolute>"; };
-		E705ACE5593F457B98ED07A5 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/platform.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = platform.h; path = vendor/glfw/src/platform.h; sourceTree = SOURCE_ROOT; };
-		ED51487F857144D6B8C9A457 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/null_monitor.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = null_monitor.c; path = vendor/glfw/src/null_monitor.c; sourceTree = SOURCE_ROOT; };
-		F29187BB7E154DA58A9A7175 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/imgui/imgui_widgets.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = imgui_widgets.cpp; path = vendor/imgui/imgui_widgets.cpp; sourceTree = SOURCE_ROOT; };
-		FD90D8A947324F11B8826AE7 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/null_joystick.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = null_joystick.c; path = vendor/glfw/src/null_joystick.c; sourceTree = SOURCE_ROOT; };
+		01C4F78BEA324C77965F07A1 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/include/GLFW/glfw3native.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = glfw3native.h; path = vendor/glfw/include/GLFW/glfw3native.h; sourceTree = SOURCE_ROOT; };
+		048E4E0C3E03493D8AB5F206 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = vendor/glfw/src/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		04D6DB2E3922400CAA546856 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/init.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = init.c; path = vendor/glfw/src/init.c; sourceTree = SOURCE_ROOT; };
+		075FE4A738F0404B95A7C8A2 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/cocoa_joystick.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = cocoa_joystick.m; path = vendor/glfw/src/cocoa_joystick.m; sourceTree = SOURCE_ROOT; };
+		07B3504D11954130B793837B /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/cocoa_window.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = cocoa_window.m; path = vendor/glfw/src/cocoa_window.m; sourceTree = SOURCE_ROOT; };
+		0CBF3FB696ED43069F45872F /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/egl_context.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = egl_context.c; path = vendor/glfw/src/egl_context.c; sourceTree = SOURCE_ROOT; };
+		0CF8DAAFD5D8403590AA9B46 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/window.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = window.c; path = vendor/glfw/src/window.c; sourceTree = SOURCE_ROOT; };
+		127AD1E2A6EF40E7B67C2BE9 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/platform.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = platform.c; path = vendor/glfw/src/platform.c; sourceTree = SOURCE_ROOT; };
+		15036BD8D6844B5096C86D75 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/null_init.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = null_init.c; path = vendor/glfw/src/null_init.c; sourceTree = SOURCE_ROOT; };
+		15AC7BDA0AD64245A51C4BEA /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/nsgl_context.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = nsgl_context.m; path = vendor/glfw/src/nsgl_context.m; sourceTree = SOURCE_ROOT; };
+		1AA9DE1DFD5445B68BEB96D5 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/include/GLFW/glfw3.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = glfw3.h; path = vendor/glfw/include/GLFW/glfw3.h; sourceTree = SOURCE_ROOT; };
+		240BD0805E644E54BFE1B55E /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = vendor/glfw/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		329A5DD3B1604E0097944774 /* /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.0.sdk/System/Library/Frameworks/CoreMedia.framework */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.0.sdk/System/Library/Frameworks/CoreMedia.framework; sourceTree = "<absolute>"; };
+		359E5E7CB06D452C9F22A63F /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/cocoa_init.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = cocoa_init.m; path = vendor/glfw/src/cocoa_init.m; sourceTree = SOURCE_ROOT; };
+		3879B192C2894935B860689F /* /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.0.sdk/System/Library/Frameworks/Metal.framework */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.framework; name = Metal.framework; path = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.0.sdk/System/Library/Frameworks/Metal.framework; sourceTree = "<absolute>"; };
+		3F89B7A2D72149FDBA7A2229 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/imgui/imgui_tables.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = imgui_tables.cpp; path = vendor/imgui/imgui_tables.cpp; sourceTree = SOURCE_ROOT; };
+		45DBE490D783494E965B7199 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/mappings.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = mappings.h; path = vendor/glfw/src/mappings.h; sourceTree = SOURCE_ROOT; };
+		4A636C2A56BC4D1191CECCEF /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/posix_module.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = posix_module.c; path = vendor/glfw/src/posix_module.c; sourceTree = SOURCE_ROOT; };
+		4BA24EAD5B5F4ABE84577896 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/null_joystick.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = null_joystick.h; path = vendor/glfw/src/null_joystick.h; sourceTree = SOURCE_ROOT; };
+		4BE64354E36949E5B58DA10C /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/posix_thread.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = posix_thread.h; path = vendor/glfw/src/posix_thread.h; sourceTree = SOURCE_ROOT; };
+		4DF759607B1240E4A5DC4340 /* BlackHole */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = BlackHole; sourceTree = BUILT_PRODUCTS_DIR; };
+		4ED60948D0394042AFCB75E9 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/internal.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = internal.h; path = vendor/glfw/src/internal.h; sourceTree = SOURCE_ROOT; };
+		53160DB54C994A699E21D2CB /* /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.0.sdk/System/Library/Frameworks/AVFoundation.framework */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.0.sdk/System/Library/Frameworks/AVFoundation.framework; sourceTree = "<absolute>"; };
+		54E056AEE8724432AC0871BC /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/platform.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = platform.h; path = vendor/glfw/src/platform.h; sourceTree = SOURCE_ROOT; };
+		566D9FB4DB314AFA900C923A /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/null_monitor.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = null_monitor.c; path = vendor/glfw/src/null_monitor.c; sourceTree = SOURCE_ROOT; };
+		56A35388593F4410AF86D87F /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/CMake/GenerateMappings.cmake */ = {isa = PBXFileReference; explicitFileType = default; fileEncoding = 4; name = GenerateMappings.cmake; path = vendor/glfw/CMake/GenerateMappings.cmake; sourceTree = SOURCE_ROOT; };
+		5A5B2E44F33D4CF09AA07971 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/vulkan.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = vulkan.c; path = vendor/glfw/src/vulkan.c; sourceTree = SOURCE_ROOT; };
+		5F86F90C5E8A4753BF7A65A0 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/cocoa_monitor.m */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.objc; fileEncoding = 4; name = cocoa_monitor.m; path = vendor/glfw/src/cocoa_monitor.m; sourceTree = SOURCE_ROOT; };
+		6C13B87BF7514059AAE1DA0E /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/imgui/imgui_draw.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = imgui_draw.cpp; path = vendor/imgui/imgui_draw.cpp; sourceTree = SOURCE_ROOT; };
+		702C5D6936C644C99E65E925 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = vendor/glfw/src/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		710BC45A24524BA089D5ACE3 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/null_window.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = null_window.c; path = vendor/glfw/src/null_window.c; sourceTree = SOURCE_ROOT; };
+		722116F33B2644F1B2E0246A /* /Users/kanishksharma/Downloads/BlackHoleGPU/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		7DE1BF1B0D9E458C89612C2F /* /Users/kanishksharma/Downloads/BlackHoleGPU/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		7FA029588C724866B243F56B /* /Users/kanishksharma/Downloads/BlackHoleGPU/src/Renderer.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = Renderer.mm; path = src/Renderer.mm; sourceTree = SOURCE_ROOT; };
+		84122433F8E646CEA6A86F0C /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/imgui/imgui.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = imgui.cpp; path = vendor/imgui/imgui.cpp; sourceTree = SOURCE_ROOT; };
+		8A1F1C6021864190B52921EB /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/posix_thread.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = posix_thread.c; path = vendor/glfw/src/posix_thread.c; sourceTree = SOURCE_ROOT; };
+		98DD7436D919406B824E1642 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/input.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = input.c; path = vendor/glfw/src/input.c; sourceTree = SOURCE_ROOT; };
+		9F3DFFDB860F440D8222D1BF /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/cocoa_time.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = cocoa_time.h; path = vendor/glfw/src/cocoa_time.h; sourceTree = SOURCE_ROOT; };
+		A1AF4B9CA2A8445CA92173FA /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/mappings.h.in */ = {isa = PBXFileReference; explicitFileType = default; fileEncoding = 4; name = mappings.h.in; path = vendor/glfw/src/mappings.h.in; sourceTree = SOURCE_ROOT; };
+		A69752A7818F40F8B1C1FF87 /* /Users/kanishksharma/Downloads/BlackHoleGPU/shaders/BlackHole.metal */ = {isa = PBXFileReference; explicitFileType = sourcecode.metal; fileEncoding = 4; name = BlackHole.metal; path = shaders/BlackHole.metal; sourceTree = SOURCE_ROOT; };
+		A8B30B6B992D456094D905A8 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/monitor.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = monitor.c; path = vendor/glfw/src/monitor.c; sourceTree = SOURCE_ROOT; };
+		AA73C1E8A1D642D3ABB49092 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/null_joystick.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = null_joystick.c; path = vendor/glfw/src/null_joystick.c; sourceTree = SOURCE_ROOT; };
+		B244EEE935B44B12A119F3A0 /* /Users/kanishksharma/Downloads/BlackHoleGPU/build/CMakeFiles/BlackHole.dir/Info.plist */ = {isa = PBXFileReference; explicitFileType = sourcecode.text.plist; fileEncoding = 4; name = Info.plist; path = build/CMakeFiles/BlackHole.dir/Info.plist; sourceTree = SOURCE_ROOT; };
+		B2EB23F1E5A44CBC84ACB3A2 /* /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.0.sdk/System/Library/Frameworks/Foundation.framework */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		B3E9C73B61F3430EA1077ED2 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/imgui/backends/imgui_impl_glfw.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = imgui_impl_glfw.cpp; path = vendor/imgui/backends/imgui_impl_glfw.cpp; sourceTree = SOURCE_ROOT; };
+		B7BFFEDAE1414ED49C7261D5 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/cocoa_time.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = cocoa_time.c; path = vendor/glfw/src/cocoa_time.c; sourceTree = SOURCE_ROOT; };
+		B826FC559254465484A763EF /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/imgui/backends/imgui_impl_metal.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = imgui_impl_metal.mm; path = vendor/imgui/backends/imgui_impl_metal.mm; sourceTree = SOURCE_ROOT; };
+		BA59F3274C194ED4B33CA6B0 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/null_platform.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = null_platform.h; path = vendor/glfw/src/null_platform.h; sourceTree = SOURCE_ROOT; };
+		BAFC0311E049461391FB3A12 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/osmesa_context.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = osmesa_context.c; path = vendor/glfw/src/osmesa_context.c; sourceTree = SOURCE_ROOT; };
+		BB7410D1620C45F19D2299F9 /* glfw */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libglfw3.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC57733E60FF4FFD9E33C28B /* /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.0.sdk/System/Library/Frameworks/CoreVideo.framework */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.0.sdk/System/Library/Frameworks/CoreVideo.framework; sourceTree = "<absolute>"; };
+		C403EE91AAD54A24BD757D03 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/cocoa_joystick.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = cocoa_joystick.h; path = vendor/glfw/src/cocoa_joystick.h; sourceTree = SOURCE_ROOT; };
+		C90F081D3A7E4870B7188F59 /* /Users/kanishksharma/Downloads/BlackHoleGPU/src/main.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = main.cpp; path = src/main.cpp; sourceTree = SOURCE_ROOT; };
+		D3733FF4153D452C994F676C /* /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.0.sdk/System/Library/Frameworks/QuartzCore.framework */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = "<absolute>"; };
+		D5B89CBC34544690BAC913AA /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/cocoa_platform.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = cocoa_platform.h; path = vendor/glfw/src/cocoa_platform.h; sourceTree = SOURCE_ROOT; };
+		E0341574F0154E1EA754A82C /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/context.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = context.c; path = vendor/glfw/src/context.c; sourceTree = SOURCE_ROOT; };
+		E6B31F893C6C4315B25D1523 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/imgui/imgui_widgets.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = imgui_widgets.cpp; path = vendor/imgui/imgui_widgets.cpp; sourceTree = SOURCE_ROOT; };
+		FC2376B1B98748E5A64B040A /* /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.0.sdk/System/Library/Frameworks/GameController.framework */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = wrapper.framework; name = GameController.framework; path = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.0.sdk/System/Library/Frameworks/GameController.framework; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		C421AB0033844D0B97571368 /* Frameworks */ = {
+		55F441BF81854448AC9A1963 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E3057DDE0BA141F881A666D7 /* Frameworks */ = {
+		DE95998ADAFE416CA6F10014 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -271,201 +277,204 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		05F6E2D93D93437AAA0802F2 /* GLFW3 */ = {
+		08E77F7055CE4E29A24A9F3C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				64BFECFAD2414FD390514D35 /* uninstall */,
-				12ACC09D3F744CEE9CD8CB48 /* glfw */,
-				D70618727D5241FEB5B5B440 /* update_mappings */,
-			);
-			name = GLFW3;
-			sourceTree = "<group>";
-		};
-		070F79CB91F2496BB9170FDB /* CMake Rules */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "CMake Rules";
-			sourceTree = "<group>";
-		};
-		118D506F5D3D45D1ADB5C9FD /* BlackHole */ = {
-			isa = PBXGroup;
-			children = (
-				63FE07FC592A4F34A1608EB4 /* Source Files */,
-				1628147946AE4FD4A8332067 /* Resources */,
-				D2A3826500234DAB82F90542 /* /Users/kanishksharma/Downloads/BlackHoleGPU/CMakeLists.txt */,
-				900BBFB7F1EC48F2AA6C0AA9 /* /Users/kanishksharma/Downloads/BlackHoleGPU/shaders/BlackHole.metal */,
-			);
-			name = BlackHole;
-			sourceTree = "<group>";
-		};
-		12ACC09D3F744CEE9CD8CB48 /* glfw */ = {
-			isa = PBXGroup;
-			children = (
-				2570BE7B67B34AD59C532A85 /* Header Files */,
-				558E182E88F34711BF65F3A9 /* Source Files */,
-				68874D1EEBA6472E9925C2A9 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/CMakeLists.txt */,
-			);
-			name = glfw;
-			sourceTree = "<group>";
-		};
-		1628147946AE4FD4A8332067 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				8202EFFB76284EC5BC82E8F6 /* /Users/kanishksharma/Downloads/BlackHoleGPU/build/CMakeFiles/BlackHole.dir/Info.plist */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
 		};
-		2570BE7B67B34AD59C532A85 /* Header Files */ = {
+		192893CBC34E4A4A89833247 /* uninstall */ = {
 			isa = PBXGroup;
 			children = (
-				DB4881F4436044949D5412EC /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/include/GLFW/glfw3.h */,
-				60FFD537E90C45928BF69EC8 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/include/GLFW/glfw3native.h */,
-				4F88A669D4064196A560FBA3 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/cocoa_joystick.h */,
-				86EA8173838047578758B0E6 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/cocoa_platform.h */,
-				8335E89B708743BD91B97E62 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/cocoa_time.h */,
-				797AA64BF9244AA690F20DF8 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/internal.h */,
-				6DEFF68506384F3AB0A1B4AF /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/mappings.h */,
-				087731844D6D4F2FBBDE58F4 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/null_joystick.h */,
-				641C49D860F04064AB794179 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/null_platform.h */,
-				E705ACE5593F457B98ED07A5 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/platform.h */,
-				9278677DB77B4D65AEAF75E5 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/posix_thread.h */,
-			);
-			name = "Header Files";
-			sourceTree = "<group>";
-		};
-		558E182E88F34711BF65F3A9 /* Source Files */ = {
-			isa = PBXGroup;
-			children = (
-				0B0762B22F604B94A1BECA95 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/cocoa_init.m */,
-				1490C94E7B574BAF870F0782 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/cocoa_joystick.m */,
-				B6815C8D86AB4EBFB1D562BC /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/cocoa_monitor.m */,
-				DFCBAB1015524FB88AC689D5 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/cocoa_time.c */,
-				B8B98217184141F8B6023C7A /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/cocoa_window.m */,
-				4CB32A23C3C2489AB1A73BC2 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/context.c */,
-				0EFCDD5C979E4001B192AA0F /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/egl_context.c */,
-				B2655F3A76C1413E88FEC4D7 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/init.c */,
-				6477D482475F4426ABECDC43 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/input.c */,
-				26DB037F14884E02A51A5C36 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/monitor.c */,
-				668E170F54D34ED58C60F8BC /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/nsgl_context.m */,
-				81F3F74B40294246BA983122 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/null_init.c */,
-				FD90D8A947324F11B8826AE7 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/null_joystick.c */,
-				ED51487F857144D6B8C9A457 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/null_monitor.c */,
-				851677501CBC44A3875CBF75 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/null_window.c */,
-				52B3753077CD495AB90F7E46 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/osmesa_context.c */,
-				317DC0D007234959830C0E25 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/platform.c */,
-				0D27159CC2A04EC49FB0702A /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/posix_module.c */,
-				A05D2F6118D549D1BC7C7FD4 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/posix_thread.c */,
-				77060ECE2A1D478CAC0966F5 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/vulkan.c */,
-				CBB5D6C8A6D9486B83337686 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/window.c */,
-			);
-			name = "Source Files";
-			sourceTree = "<group>";
-		};
-		594E0C269D034D84B08A3DFF /* ALL_BUILD */ = {
-			isa = PBXGroup;
-			children = (
-				070F79CB91F2496BB9170FDB /* CMake Rules */,
-				A68A4AD5B90B4F01A683C0A1 /* /Users/kanishksharma/Downloads/BlackHoleGPU/CMakeLists.txt */,
-			);
-			name = ALL_BUILD;
-			sourceTree = "<group>";
-		};
-		60510B6D0D734F18A9F482AC /* Header Files */ = {
-			isa = PBXGroup;
-			children = (
-				2AF1724465B74DF3BC5B2C16 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/mappings.h.in */,
-			);
-			name = "Header Files";
-			sourceTree = "<group>";
-		};
-		63FE07FC592A4F34A1608EB4 /* Source Files */ = {
-			isa = PBXGroup;
-			children = (
-				0520E09650BE471BAD69881D /* /Users/kanishksharma/Downloads/BlackHoleGPU/src/Renderer.mm */,
-				8C35BBE2C53E483E83E08095 /* /Users/kanishksharma/Downloads/BlackHoleGPU/src/main.cpp */,
-				7262DCB139FD47FF91F13C63 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/imgui/backends/imgui_impl_glfw.cpp */,
-				80FF364B48D64F9388EA6297 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/imgui/backends/imgui_impl_metal.mm */,
-				243F3D96E0174853897C2EC1 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/imgui/imgui.cpp */,
-				51A5C0ED04DE45C69C661FF6 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/imgui/imgui_draw.cpp */,
-				999EBD9EBC464587B68AA987 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/imgui/imgui_tables.cpp */,
-				F29187BB7E154DA58A9A7175 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/imgui/imgui_widgets.cpp */,
-			);
-			name = "Source Files";
-			sourceTree = "<group>";
-		};
-		64BFECFAD2414FD390514D35 /* uninstall */ = {
-			isa = PBXGroup;
-			children = (
-				EEF1CC56B3B845CAB57DD6CF /* CMake Rules */,
-				C14CA65BD919443BAB36FA7D /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/CMakeLists.txt */,
+				6E24DD13DB2D4582A869B82C /* CMake Rules */,
+				240BD0805E644E54BFE1B55E /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/CMakeLists.txt */,
 			);
 			name = uninstall;
 			sourceTree = "<group>";
 		};
-		8F29623CD7344CB7AF92E39C /* Resources */ = {
+		21E41E8D399C4226BF1F349B /* update_mappings */ = {
 			isa = PBXGroup;
 			children = (
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
-		B64C841166824688AAE9F16E /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				4067AA93FEF442509EA7CEC5 /* BlackHole */,
-				1EFF042CD6094472B6C57B04 /* glfw */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		B943F5DC2F954BC0B306B8F7 = {
-			isa = PBXGroup;
-			children = (
-				118D506F5D3D45D1ADB5C9FD /* BlackHole */,
-				594E0C269D034D84B08A3DFF /* ALL_BUILD */,
-				05F6E2D93D93437AAA0802F2 /* GLFW3 */,
-				B64C841166824688AAE9F16E /* Products */,
-				E4331E46A2EF4248B2274157 /* Frameworks */,
-				8F29623CD7344CB7AF92E39C /* Resources */,
-			);
-			sourceTree = "<group>";
-		};
-		D70618727D5241FEB5B5B440 /* update_mappings */ = {
-			isa = PBXGroup;
-			children = (
-				60510B6D0D734F18A9F482AC /* Header Files */,
-				FA09040B14A540BCBBA5A71D /* CMake Rules */,
-				243539C4235B422192EF70E4 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/CMake/GenerateMappings.cmake */,
-				C692501C67114D81B39409C8 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/CMakeLists.txt */,
+				51A8759D34954BFAA4AC8523 /* Header Files */,
+				2C76DA6A5368447F9A03D2A6 /* CMake Rules */,
+				56A35388593F4410AF86D87F /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/CMake/GenerateMappings.cmake */,
+				702C5D6936C644C99E65E925 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/CMakeLists.txt */,
 			);
 			name = update_mappings;
 			sourceTree = "<group>";
 		};
-		E4331E46A2EF4248B2274157 /* Frameworks */ = {
+		26A40F0E18C64452AA221FF6 /* CMake Rules */ = {
 			isa = PBXGroup;
 			children = (
-				23511D9B97264A9B925BF81B /* /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.0.sdk/System/Library/Frameworks/Metal.framework */,
-				CEB6D77352544017B3C0F91D /* /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.0.sdk/System/Library/Frameworks/Foundation.framework */,
-				E0689A32CEB340D9A29691F2 /* /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.0.sdk/System/Library/Frameworks/QuartzCore.framework */,
-				BC3362ECA03141FF99046472 /* /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.0.sdk/System/Library/Frameworks/GameController.framework */,
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		29DB0B4F67E1497CA8677667 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				7FA029588C724866B243F56B /* /Users/kanishksharma/Downloads/BlackHoleGPU/src/Renderer.mm */,
+				C90F081D3A7E4870B7188F59 /* /Users/kanishksharma/Downloads/BlackHoleGPU/src/main.cpp */,
+				B3E9C73B61F3430EA1077ED2 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/imgui/backends/imgui_impl_glfw.cpp */,
+				B826FC559254465484A763EF /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/imgui/backends/imgui_impl_metal.mm */,
+				84122433F8E646CEA6A86F0C /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/imgui/imgui.cpp */,
+				6C13B87BF7514059AAE1DA0E /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/imgui/imgui_draw.cpp */,
+				3F89B7A2D72149FDBA7A2229 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/imgui/imgui_tables.cpp */,
+				E6B31F893C6C4315B25D1523 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/imgui/imgui_widgets.cpp */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		2C76DA6A5368447F9A03D2A6 /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		2CFC6713A03C470EA2503F08 /* ALL_BUILD */ = {
+			isa = PBXGroup;
+			children = (
+				26A40F0E18C64452AA221FF6 /* CMake Rules */,
+				7DE1BF1B0D9E458C89612C2F /* /Users/kanishksharma/Downloads/BlackHoleGPU/CMakeLists.txt */,
+			);
+			name = ALL_BUILD;
+			sourceTree = "<group>";
+		};
+		35DF63768BAD4C648E2F88B1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3879B192C2894935B860689F /* /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.0.sdk/System/Library/Frameworks/Metal.framework */,
+				B2EB23F1E5A44CBC84ACB3A2 /* /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.0.sdk/System/Library/Frameworks/Foundation.framework */,
+				D3733FF4153D452C994F676C /* /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.0.sdk/System/Library/Frameworks/QuartzCore.framework */,
+				FC2376B1B98748E5A64B040A /* /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.0.sdk/System/Library/Frameworks/GameController.framework */,
+				53160DB54C994A699E21D2CB /* /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.0.sdk/System/Library/Frameworks/AVFoundation.framework */,
+				329A5DD3B1604E0097944774 /* /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.0.sdk/System/Library/Frameworks/CoreMedia.framework */,
+				BC57733E60FF4FFD9E33C28B /* /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.0.sdk/System/Library/Frameworks/CoreVideo.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		EEF1CC56B3B845CAB57DD6CF /* CMake Rules */ = {
+		4EBD7C71C9724E7995B7DDC7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4DF759607B1240E4A5DC4340 /* BlackHole */,
+				BB7410D1620C45F19D2299F9 /* glfw */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		507E141CCD97416A806E83F9 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				359E5E7CB06D452C9F22A63F /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/cocoa_init.m */,
+				075FE4A738F0404B95A7C8A2 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/cocoa_joystick.m */,
+				5F86F90C5E8A4753BF7A65A0 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/cocoa_monitor.m */,
+				B7BFFEDAE1414ED49C7261D5 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/cocoa_time.c */,
+				07B3504D11954130B793837B /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/cocoa_window.m */,
+				E0341574F0154E1EA754A82C /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/context.c */,
+				0CBF3FB696ED43069F45872F /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/egl_context.c */,
+				04D6DB2E3922400CAA546856 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/init.c */,
+				98DD7436D919406B824E1642 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/input.c */,
+				A8B30B6B992D456094D905A8 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/monitor.c */,
+				15AC7BDA0AD64245A51C4BEA /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/nsgl_context.m */,
+				15036BD8D6844B5096C86D75 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/null_init.c */,
+				AA73C1E8A1D642D3ABB49092 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/null_joystick.c */,
+				566D9FB4DB314AFA900C923A /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/null_monitor.c */,
+				710BC45A24524BA089D5ACE3 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/null_window.c */,
+				BAFC0311E049461391FB3A12 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/osmesa_context.c */,
+				127AD1E2A6EF40E7B67C2BE9 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/platform.c */,
+				4A636C2A56BC4D1191CECCEF /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/posix_module.c */,
+				8A1F1C6021864190B52921EB /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/posix_thread.c */,
+				5A5B2E44F33D4CF09AA07971 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/vulkan.c */,
+				0CF8DAAFD5D8403590AA9B46 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/window.c */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		51A8759D34954BFAA4AC8523 /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				A1AF4B9CA2A8445CA92173FA /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/mappings.h.in */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+		691D803984134EC1A18D7038 /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				1AA9DE1DFD5445B68BEB96D5 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/include/GLFW/glfw3.h */,
+				01C4F78BEA324C77965F07A1 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/include/GLFW/glfw3native.h */,
+				C403EE91AAD54A24BD757D03 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/cocoa_joystick.h */,
+				D5B89CBC34544690BAC913AA /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/cocoa_platform.h */,
+				9F3DFFDB860F440D8222D1BF /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/cocoa_time.h */,
+				4ED60948D0394042AFCB75E9 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/internal.h */,
+				45DBE490D783494E965B7199 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/mappings.h */,
+				4BA24EAD5B5F4ABE84577896 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/null_joystick.h */,
+				BA59F3274C194ED4B33CA6B0 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/null_platform.h */,
+				54E056AEE8724432AC0871BC /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/platform.h */,
+				4BE64354E36949E5B58DA10C /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/posix_thread.h */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+		6E24DD13DB2D4582A869B82C /* CMake Rules */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			name = "CMake Rules";
 			sourceTree = "<group>";
 		};
-		FA09040B14A540BCBBA5A71D /* CMake Rules */ = {
+		70411E62AFE343C285B0BD12 /* BlackHole */ = {
 			isa = PBXGroup;
 			children = (
+				29DB0B4F67E1497CA8677667 /* Source Files */,
+				E9D4BC920582452581752B48 /* Resources */,
+				722116F33B2644F1B2E0246A /* /Users/kanishksharma/Downloads/BlackHoleGPU/CMakeLists.txt */,
+				A69752A7818F40F8B1C1FF87 /* /Users/kanishksharma/Downloads/BlackHoleGPU/shaders/BlackHole.metal */,
 			);
-			name = "CMake Rules";
+			name = BlackHole;
+			sourceTree = "<group>";
+		};
+		948EE1DE863547258F6832CE /* glfw */ = {
+			isa = PBXGroup;
+			children = (
+				691D803984134EC1A18D7038 /* Header Files */,
+				507E141CCD97416A806E83F9 /* Source Files */,
+				048E4E0C3E03493D8AB5F206 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/CMakeLists.txt */,
+			);
+			name = glfw;
+			sourceTree = "<group>";
+		};
+		9EDC5639FDCD4F878F4417B6 = {
+			isa = PBXGroup;
+			children = (
+				70411E62AFE343C285B0BD12 /* BlackHole */,
+				2CFC6713A03C470EA2503F08 /* ALL_BUILD */,
+				FBA745AD7A9F4595A2D88E30 /* GLFW3 */,
+				4EBD7C71C9724E7995B7DDC7 /* Products */,
+				35DF63768BAD4C648E2F88B1 /* Frameworks */,
+				08E77F7055CE4E29A24A9F3C /* Resources */,
+			);
+			sourceTree = "<group>";
+		};
+		E9D4BC920582452581752B48 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B244EEE935B44B12A119F3A0 /* /Users/kanishksharma/Downloads/BlackHoleGPU/build/CMakeFiles/BlackHole.dir/Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		FBA745AD7A9F4595A2D88E30 /* GLFW3 */ = {
+			isa = PBXGroup;
+			children = (
+				192893CBC34E4A4A89833247 /* uninstall */,
+				948EE1DE863547258F6832CE /* glfw */,
+				21E41E8D399C4226BF1F349B /* update_mappings */,
+			);
+			name = GLFW3;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -473,29 +482,29 @@
 /* Begin PBXNativeTarget section */
 		773E4114B2B4E530F6F7963B /* BlackHole */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0D2219D3E0724494B6B8CC5B /* Build configuration list for PBXNativeTarget "BlackHole" */;
+			buildConfigurationList = AC4185E1126444CF986EB5EB /* Build configuration list for PBXNativeTarget "BlackHole" */;
 			buildPhases = (
-				0767B492138246CE9D4FAFFF /* Resources */,
-				9DA2A93D25BD47BE8CA24E5E /* Sources */,
-				C421AB0033844D0B97571368 /* Frameworks */,
+				ECBCAB4DB7B242E19D77ED83 /* Resources */,
+				40559A68F39948B09FEE9B10 /* Sources */,
+				DE95998ADAFE416CA6F10014 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				C997489DA374423082C74146 /* PBXTargetDependency */,
-				59D325139BBB4E6FB0518DB8 /* PBXTargetDependency */,
+				898ED26558714BBE9226857F /* PBXTargetDependency */,
+				C0BD067829564D369D9936BF /* PBXTargetDependency */,
 			);
 			name = BlackHole;
 			productName = BlackHole;
-			productReference = 4067AA93FEF442509EA7CEC5 /* BlackHole */;
+			productReference = 4DF759607B1240E4A5DC4340 /* BlackHole */;
 			productType = "com.apple.product-type.application";
 		};
 		98D0896CA6A911500C67B6D0 /* glfw */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D9B4E4DF0AE94528B80DF670 /* Build configuration list for PBXNativeTarget "glfw" */;
+			buildConfigurationList = F2193B615A55450D9BDAFE60 /* Build configuration list for PBXNativeTarget "glfw" */;
 			buildPhases = (
-				A659A0797DC841E78E2B2174 /* Sources */,
-				E3057DDE0BA141F881A666D7 /* Frameworks */,
+				605CECB878A04AC59CCF278B /* Sources */,
+				55F441BF81854448AC9A1963 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -503,7 +512,7 @@
 			);
 			name = glfw;
 			productName = glfw;
-			productReference = 1EFF042CD6094472B6C57B04 /* glfw */;
+			productReference = BB7410D1620C45F19D2299F9 /* glfw */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -515,18 +524,18 @@
 				BuildIndependentTargetsInParallel = YES;
 				LastUpgradeCheck = 2600;
 			};
-			buildConfigurationList = 970332E6BBBD4EE1811DEC5C /* Build configuration list for PBXProject "BlackHoleGPU" */;
+			buildConfigurationList = EA5FDCBBA82A425BBC5C8475 /* Build configuration list for PBXProject "BlackHoleGPU" */;
 			buildSettings = {
 			};
 			buildStyles = (
-				6DF0AFAA80CA4F92BF0C5E1F /* Debug */,
-				CFACE941A1484F96B333BD94 /* Release */,
-				2005000DA1714C09A6791A8E /* MinSizeRel */,
-				BC1AEB65C8A24743AD479433 /* RelWithDebInfo */,
+				F6791786B1AD41C59AC948DB /* Debug */,
+				9B88D9FB1B104F86958B6073 /* Release */,
+				FFF88C0D442448E9A1E73F8A /* MinSizeRel */,
+				5A1FB4BB939F46C8AF69597A /* RelWithDebInfo */,
 			);
 			compatibilityVersion = "Xcode 3.2";
 			hasScannedForEncodings = 0;
-			mainGroup = B943F5DC2F954BC0B306B8F7;
+			mainGroup = 9EDC5639FDCD4F878F4417B6;
 			projectDirPath = /Users/kanishksharma/Downloads/BlackHoleGPU;
 			projectRoot = "";
 			targets = (
@@ -785,539 +794,97 @@ exit 0";
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXResourcesBuildPhase section */
-		0767B492138246CE9D4FAFFF /* Resources */ = {
+		ECBCAB4DB7B242E19D77ED83 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				512B545871DC4C2FA68CD71F /* /Users/kanishksharma/Downloads/BlackHoleGPU/shaders/BlackHole.metal */,
+				675EB1BECE83436C814CF858 /* /Users/kanishksharma/Downloads/BlackHoleGPU/shaders/BlackHole.metal */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		9DA2A93D25BD47BE8CA24E5E /* Sources */ = {
+		40559A68F39948B09FEE9B10 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9262D71D23DB4DADBDFC968A /* /Users/kanishksharma/Downloads/BlackHoleGPU/src/Renderer.mm */,
-				E7C37F90BC12451D8FF4D2BF /* /Users/kanishksharma/Downloads/BlackHoleGPU/src/main.cpp */,
-				9D2C38F50BA94B82A17EE198 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/imgui/backends/imgui_impl_glfw.cpp */,
-				5AC3E7A6159040C0815210E2 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/imgui/backends/imgui_impl_metal.mm */,
-				BA6A1DAB3216478392BF2F6A /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/imgui/imgui.cpp */,
-				C3C1EA9C5FE04088A91A64E6 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/imgui/imgui_draw.cpp */,
-				57CB8710D570404F95F60399 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/imgui/imgui_tables.cpp */,
-				E98C796FA1A74E2589D8902F /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/imgui/imgui_widgets.cpp */,
+				CAACECE6BF3D4E42803F0E66 /* /Users/kanishksharma/Downloads/BlackHoleGPU/src/Renderer.mm */,
+				32029EFB5E81453086B1CC58 /* /Users/kanishksharma/Downloads/BlackHoleGPU/src/main.cpp */,
+				6F72301E9F8245CD92C34272 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/imgui/backends/imgui_impl_glfw.cpp */,
+				EE7ABECE1AF9407293882C16 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/imgui/backends/imgui_impl_metal.mm */,
+				8D4BE0A43E1C454B88E7AE8C /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/imgui/imgui.cpp */,
+				C10F6C2DCADC4F96913EC649 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/imgui/imgui_draw.cpp */,
+				F4AB4E0CD04C42F9A78D7360 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/imgui/imgui_tables.cpp */,
+				AF31823A25F64537BD124B8D /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/imgui/imgui_widgets.cpp */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A659A0797DC841E78E2B2174 /* Sources */ = {
+		605CECB878A04AC59CCF278B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2F44FA0B0DF94702B074708D /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/cocoa_init.m */,
-				7E22C84B31EC49598BB53401 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/cocoa_joystick.m */,
-				47D2BBE2D1684FA3AF87EE7C /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/cocoa_monitor.m */,
-				BB21A3CBEA0F4045A5CCEE2B /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/cocoa_time.c */,
-				FAA6182BEED0400F85C9B978 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/cocoa_window.m */,
-				77C84AB02B9F424F83B29B94 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/context.c */,
-				A94822C8B5B24A35BB7EBD46 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/egl_context.c */,
-				9026DECFF09B4CDE817FC4BA /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/init.c */,
-				2F432BBB3DE74F24B488DDC9 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/input.c */,
-				A7A6D99A302648EC8D3F1BDF /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/monitor.c */,
-				F346D6DE4A514B32BEAFFEDE /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/nsgl_context.m */,
-				BCC7C8FA921148FCBB679500 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/null_init.c */,
-				A7DCBEA3875A4E58A56D8131 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/null_joystick.c */,
-				F60E68B6E7A44812A45A7CA4 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/null_monitor.c */,
-				1AE0C4FAEC894616A694F658 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/null_window.c */,
-				FFA28C545BF74D0BB727F32C /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/osmesa_context.c */,
-				058E1E8238A840188DFCCC18 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/platform.c */,
-				EDEDEB4273F74BF995382902 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/posix_module.c */,
-				5E6F0435262345A5B31022BF /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/posix_thread.c */,
-				F0BE794C8BB04640ADA7AAAF /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/vulkan.c */,
-				A675B4C104184BD692A2347F /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/window.c */,
+				D5B2910B1D1A4D8489A73F1A /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/cocoa_init.m */,
+				D99B70608566412EAAA0ED27 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/cocoa_joystick.m */,
+				0420581772C54C90B9C9389F /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/cocoa_monitor.m */,
+				38F06544F0354D78924B9BEC /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/cocoa_time.c */,
+				6E1E1368E45044758D68754A /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/cocoa_window.m */,
+				17DE60FE24F84065AD3C15DF /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/context.c */,
+				F9B14133CE814E28AF0A49F8 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/egl_context.c */,
+				3B7756CF365346EABE9D5E98 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/init.c */,
+				53F9F2B047614711AB9333E3 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/input.c */,
+				873D3B0BD88B46BE901D1191 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/monitor.c */,
+				2A47EBBB5F6B48FE8A1227CE /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/nsgl_context.m */,
+				39B83E1B0DAB40E092D9C33D /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/null_init.c */,
+				6687017BA3024996B12E67AA /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/null_joystick.c */,
+				24C4AEA52EBA441D8DF0D6E2 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/null_monitor.c */,
+				AA56E237965B4AADBD93B4EA /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/null_window.c */,
+				B48F744B6F3C46B2AFDD91FC /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/osmesa_context.c */,
+				300C99A6DBEB4AF1961B5A93 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/platform.c */,
+				B799DA91908C4783A11FA8B0 /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/posix_module.c */,
+				BA735AB1F12346D6853E171E /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/posix_thread.c */,
+				D9998A0F58F34BD28ADFD09F /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/vulkan.c */,
+				38D7EEB6E8C246C5AB4C210B /* /Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src/window.c */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		1B00B22087B34EB28135AE1E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 773E4114B2B4E530F6F7963B /* BlackHole */;
-			targetProxy = AD88BD05B72A45FDA70FD038 /* PBXContainerItemProxy */;
-		};
-		59D325139BBB4E6FB0518DB8 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 98D0896CA6A911500C67B6D0 /* glfw */;
-			targetProxy = 283886AC39AF41A78556BF1F /* PBXContainerItemProxy */;
-		};
-		712CB4C75D4A40F59377D7B3 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 98D0896CA6A911500C67B6D0 /* glfw */;
-			targetProxy = 06D3888131214D40BA044473 /* PBXContainerItemProxy */;
-		};
-		78249483A3654CBCA7A7138C /* PBXTargetDependency */ = {
+		2369557E7E8244A6A5FEAC79 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 03E46ABF405EC8C9F03365FE /* ZERO_CHECK */;
-			targetProxy = 7EE5BF9FC0BC497B8506CE4A /* PBXContainerItemProxy */;
+			targetProxy = 761B05FF838C4D5991ABF098 /* PBXContainerItemProxy */;
 		};
-		8EB79504EDE64F5EA58ECF2D /* PBXTargetDependency */ = {
+		898ED26558714BBE9226857F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 03E46ABF405EC8C9F03365FE /* ZERO_CHECK */;
+			targetProxy = 874D78AFF99B435DAA199661 /* PBXContainerItemProxy */;
+		};
+		978BFBE210F34880B5A2DBF9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 31D8C687F78532DBD9C48FBB /* ALL_BUILD */;
-			targetProxy = D545B4A448964F3A89515AE1 /* PBXContainerItemProxy */;
+			targetProxy = CA2BDDCF50584A01B44BF1BF /* PBXContainerItemProxy */;
 		};
-		C997489DA374423082C74146 /* PBXTargetDependency */ = {
+		C0BD067829564D369D9936BF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 03E46ABF405EC8C9F03365FE /* ZERO_CHECK */;
-			targetProxy = F5CEB6A3EF324280B654A524 /* PBXContainerItemProxy */;
+			target = 98D0896CA6A911500C67B6D0 /* glfw */;
+			targetProxy = 9F539317A02B4A748CB3C43A /* PBXContainerItemProxy */;
+		};
+		DBC67ED3EACA47F5BBD65F6A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 98D0896CA6A911500C67B6D0 /* glfw */;
+			targetProxy = 4DC2BEAEE628406787DA9019 /* PBXContainerItemProxy */;
+		};
+		F741511DE05E4B1FA5A72EA4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 773E4114B2B4E530F6F7963B /* BlackHole */;
+			targetProxy = F3A01CCEA1754F489015F8FF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		1082498237EA4BA5BD28A371 /* MinSizeRel */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = arm64;
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				ONLY_ACTIVE_ARCH = NO;
-				OTHER_LDFLAGS = ("","$(inherited)");
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = update_mappings;
-				SECTORDER_FLAGS = "";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = MinSizeRel;
-		};
-		12ADC928C7404769A266F866 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = arm64;
-				COMBINE_HIDPI_IMAGES = YES;
-				CONFIGURATION_BUILD_DIR = /Users/kanishksharma/Downloads/BlackHoleGPU/build/Release;
-				EXECUTABLE_PREFIX = "";
-				EXECUTABLE_SUFFIX = "";
-				FRAMEWORK_SEARCH_PATHS = (/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.0.sdk/System/Library/Frameworks,"$(inherited)");
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 3;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = (/Users/kanishksharma/Downloads/BlackHoleGPU/src,"/Users/kanishksharma/Downloads/BlackHoleGPU/vendor/metal-cpp",/Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glm,/Users/kanishksharma/Downloads/BlackHoleGPU/vendor/imgui,/Users/kanishksharma/Downloads/BlackHoleGPU/vendor/imgui/backends,/Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/include,"$(inherited)");
-				INFOPLIST_FILE = /Users/kanishksharma/Downloads/BlackHoleGPU/build/CMakeFiles/BlackHole.dir/Info.plist;
-				INSTALL_PATH = "";
-				ONLY_ACTIVE_ARCH = NO;
-				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG '-std=gnu++17' ";
-				OTHER_LDFLAGS = (" -Wl,-search_paths_first -Wl,-headerpad_max_install_names",/Users/kanishksharma/Downloads/BlackHoleGPU/build/vendor/glfw/src/Release/libglfw3.a,"-framework Metal","-framework Foundation","-framework QuartzCore","-framework GameController","-framework Cocoa","-framework IOKit","-framework CoreFoundation","-framework QuartzCore","-lobjc","$(inherited)");
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = BlackHole;
-				SECTORDER_FLAGS = "";
-				TARGET_TEMP_DIR = "/Users/kanishksharma/Downloads/BlackHoleGPU/build/build/BlackHole.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = Release;
-		};
-		14FBEC4903EF41129BF5D30C /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = arm64;
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				ONLY_ACTIVE_ARCH = NO;
-				OTHER_LDFLAGS = ("","$(inherited)");
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = update_mappings;
-				SECTORDER_FLAGS = "";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = Release;
-		};
-		1B75BBEC5C9F42E2886A92ED /* RelWithDebInfo */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = arm64;
-				COMBINE_HIDPI_IMAGES = YES;
-				CONFIGURATION_BUILD_DIR = /Users/kanishksharma/Downloads/BlackHoleGPU/build/vendor/glfw/src/RelWithDebInfo;
-				EXECUTABLE_PREFIX = lib;
-				EXECUTABLE_SUFFIX = .a;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 2;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",_GLFW_COCOA,"$(inherited)");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = (/Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/include,/Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src,/Users/kanishksharma/Downloads/BlackHoleGPU/build/vendor/glfw/src,"$(inherited)");
-				INSTALL_PATH = "";
-				LIBRARY_STYLE = STATIC;
-				ONLY_ACTIVE_ARCH = NO;
-				OTHER_CFLAGS = ("       -DNDEBUG '-std=c99' -fPIC -Wall ","$(inherited)");
-				OTHER_LIBTOOLFLAGS = ("");
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = glfw3;
-				SECTORDER_FLAGS = "";
-				TARGET_TEMP_DIR = "/Users/kanishksharma/Downloads/BlackHoleGPU/build/build/glfw.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = RelWithDebInfo;
-		};
-		1B8D436E1E064A2AB8CE4950 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = arm64;
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				ONLY_ACTIVE_ARCH = NO;
-				OTHER_LDFLAGS = ("","$(inherited)");
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = uninstall;
-				SECTORDER_FLAGS = "";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = Debug;
-		};
-		20BBFBAD4FD146FBB48F2C45 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = arm64;
-				SDKROOT = "";
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SYMROOT = /Users/kanishksharma/Downloads/BlackHoleGPU/build/build;
-			};
-			name = Release;
-		};
-		24D578BE2BAF426A91DD6C01 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = arm64;
-				COMBINE_HIDPI_IMAGES = YES;
-				CONFIGURATION_BUILD_DIR = /Users/kanishksharma/Downloads/BlackHoleGPU/build/vendor/glfw/src/Debug;
-				EXECUTABLE_PREFIX = lib;
-				EXECUTABLE_SUFFIX = .a;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",_GLFW_COCOA,"$(inherited)");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = (/Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/include,/Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src,/Users/kanishksharma/Downloads/BlackHoleGPU/build/vendor/glfw/src,"$(inherited)");
-				INSTALL_PATH = "";
-				LIBRARY_STYLE = STATIC;
-				ONLY_ACTIVE_ARCH = NO;
-				OTHER_CFLAGS = ("   '-std=c99' -fPIC -Wall ","$(inherited)");
-				OTHER_LIBTOOLFLAGS = ("");
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = glfw3;
-				SECTORDER_FLAGS = "";
-				TARGET_TEMP_DIR = "/Users/kanishksharma/Downloads/BlackHoleGPU/build/build/glfw.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = Debug;
-		};
-		26D0DC1A23114DF88FCBDEC5 /* MinSizeRel */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = arm64;
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				ONLY_ACTIVE_ARCH = NO;
-				OTHER_LDFLAGS = ("","$(inherited)");
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = install;
-				SECTORDER_FLAGS = "";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = MinSizeRel;
-		};
-		2EAE9E064A34497D83832696 /* MinSizeRel */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = arm64;
-				SDKROOT = "";
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SYMROOT = /Users/kanishksharma/Downloads/BlackHoleGPU/build/build;
-			};
-			name = MinSizeRel;
-		};
-		354C4599C0644DF9A7898AA2 /* MinSizeRel */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = arm64;
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				ONLY_ACTIVE_ARCH = NO;
-				OTHER_LDFLAGS = ("","$(inherited)");
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = uninstall;
-				SECTORDER_FLAGS = "";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = MinSizeRel;
-		};
-		3878FF95163E4C82841A884E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = arm64;
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				ONLY_ACTIVE_ARCH = NO;
-				OTHER_LDFLAGS = ("","$(inherited)");
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ALL_BUILD;
-				SECTORDER_FLAGS = "";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = Debug;
-		};
-		388C10802EBA4BAC895C5649 /* MinSizeRel */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = arm64;
-				COMBINE_HIDPI_IMAGES = YES;
-				CONFIGURATION_BUILD_DIR = /Users/kanishksharma/Downloads/BlackHoleGPU/build/MinSizeRel;
-				EXECUTABLE_PREFIX = "";
-				EXECUTABLE_SUFFIX = "";
-				FRAMEWORK_SEARCH_PATHS = (/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.0.sdk/System/Library/Frameworks,"$(inherited)");
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = s;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = (/Users/kanishksharma/Downloads/BlackHoleGPU/src,"/Users/kanishksharma/Downloads/BlackHoleGPU/vendor/metal-cpp",/Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glm,/Users/kanishksharma/Downloads/BlackHoleGPU/vendor/imgui,/Users/kanishksharma/Downloads/BlackHoleGPU/vendor/imgui/backends,/Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/include,"$(inherited)");
-				INFOPLIST_FILE = /Users/kanishksharma/Downloads/BlackHoleGPU/build/CMakeFiles/BlackHole.dir/Info.plist;
-				INSTALL_PATH = "";
-				ONLY_ACTIVE_ARCH = NO;
-				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG '-std=gnu++17' ";
-				OTHER_LDFLAGS = (" -Wl,-search_paths_first -Wl,-headerpad_max_install_names",/Users/kanishksharma/Downloads/BlackHoleGPU/build/vendor/glfw/src/MinSizeRel/libglfw3.a,"-framework Metal","-framework Foundation","-framework QuartzCore","-framework GameController","-framework Cocoa","-framework IOKit","-framework CoreFoundation","-framework QuartzCore","-lobjc","$(inherited)");
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = BlackHole;
-				SECTORDER_FLAGS = "";
-				TARGET_TEMP_DIR = "/Users/kanishksharma/Downloads/BlackHoleGPU/build/build/BlackHole.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = MinSizeRel;
-		};
-		3DA2F48C0F124B75A7C7AB76 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = arm64;
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				ONLY_ACTIVE_ARCH = NO;
-				OTHER_LDFLAGS = ("","$(inherited)");
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = install;
-				SECTORDER_FLAGS = "";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = Debug;
-		};
-		3E3978082828423D9234908F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = arm64;
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				ONLY_ACTIVE_ARCH = NO;
-				OTHER_LDFLAGS = ("","$(inherited)");
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ZERO_CHECK;
-				SECTORDER_FLAGS = "";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = Debug;
-		};
-		4D972837BC914AC483906939 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = arm64;
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				ONLY_ACTIVE_ARCH = NO;
-				OTHER_LDFLAGS = ("","$(inherited)");
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = install;
-				SECTORDER_FLAGS = "";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = Release;
-		};
-		58055FA509D640B18B1DBFBF /* RelWithDebInfo */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = arm64;
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				ONLY_ACTIVE_ARCH = NO;
-				OTHER_LDFLAGS = ("","$(inherited)");
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ZERO_CHECK;
-				SECTORDER_FLAGS = "";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = RelWithDebInfo;
-		};
-		6155B4A69EB54707AB6214C5 /* RelWithDebInfo */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = arm64;
-				SDKROOT = "";
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SYMROOT = /Users/kanishksharma/Downloads/BlackHoleGPU/build/build;
-			};
-			name = RelWithDebInfo;
-		};
-		6692D355ABA84F8DACB9121A /* RelWithDebInfo */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = arm64;
-				COMBINE_HIDPI_IMAGES = YES;
-				CONFIGURATION_BUILD_DIR = /Users/kanishksharma/Downloads/BlackHoleGPU/build/RelWithDebInfo;
-				EXECUTABLE_PREFIX = "";
-				EXECUTABLE_SUFFIX = "";
-				FRAMEWORK_SEARCH_PATHS = (/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.0.sdk/System/Library/Frameworks,"$(inherited)");
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 2;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = (/Users/kanishksharma/Downloads/BlackHoleGPU/src,"/Users/kanishksharma/Downloads/BlackHoleGPU/vendor/metal-cpp",/Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glm,/Users/kanishksharma/Downloads/BlackHoleGPU/vendor/imgui,/Users/kanishksharma/Downloads/BlackHoleGPU/vendor/imgui/backends,/Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/include,"$(inherited)");
-				INFOPLIST_FILE = /Users/kanishksharma/Downloads/BlackHoleGPU/build/CMakeFiles/BlackHole.dir/Info.plist;
-				INSTALL_PATH = "";
-				ONLY_ACTIVE_ARCH = NO;
-				OTHER_CPLUSPLUSFLAGS = "       -DNDEBUG '-std=gnu++17' ";
-				OTHER_LDFLAGS = (" -Wl,-search_paths_first -Wl,-headerpad_max_install_names",/Users/kanishksharma/Downloads/BlackHoleGPU/build/vendor/glfw/src/RelWithDebInfo/libglfw3.a,"-framework Metal","-framework Foundation","-framework QuartzCore","-framework GameController","-framework Cocoa","-framework IOKit","-framework CoreFoundation","-framework QuartzCore","-lobjc","$(inherited)");
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = BlackHole;
-				SECTORDER_FLAGS = "";
-				TARGET_TEMP_DIR = "/Users/kanishksharma/Downloads/BlackHoleGPU/build/build/BlackHole.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = RelWithDebInfo;
-		};
-		6F45FD9EA1034FB7A6C2F081 /* RelWithDebInfo */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = arm64;
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				ONLY_ACTIVE_ARCH = NO;
-				OTHER_LDFLAGS = ("","$(inherited)");
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = install;
-				SECTORDER_FLAGS = "";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = RelWithDebInfo;
-		};
-		7320406C0BE74A388F287E8C /* RelWithDebInfo */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = arm64;
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				ONLY_ACTIVE_ARCH = NO;
-				OTHER_LDFLAGS = ("","$(inherited)");
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ALL_BUILD;
-				SECTORDER_FLAGS = "";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = RelWithDebInfo;
-		};
-		73C9247C923140999EC46CD7 /* MinSizeRel */ = {
+		075C8304AD28458983CD8068 /* MinSizeRel */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -1346,7 +913,7 @@ exit 0";
 			};
 			name = MinSizeRel;
 		};
-		7EE596B63A134F8ABE7A8069 /* RelWithDebInfo */ = {
+		0763DC1EBD7149CD90D1D095 /* MinSizeRel */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -1361,14 +928,46 @@ exit 0";
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = ("","$(inherited)");
 				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = uninstall;
+				PRODUCT_NAME = update_mappings;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		0D888E2DC8F54EA3B85CA820 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				SDKROOT = "";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SYMROOT = /Users/kanishksharma/Downloads/BlackHoleGPU/build/build;
+			};
+			name = RelWithDebInfo;
+		};
+		1347F083D6904AEF8D1D071E /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
 				SECTORDER_FLAGS = "";
 				USE_HEADERMAP = NO;
 				WARNING_CFLAGS = ("$(inherited)");
 			};
 			name = RelWithDebInfo;
 		};
-		812C962CE534475A9437896E /* MinSizeRel */ = {
+		16A8D60C894A496082CFD006 /* MinSizeRel */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -1390,7 +989,588 @@ exit 0";
 			};
 			name = MinSizeRel;
 		};
-		91C9E04A16CD430788589710 /* Release */ = {
+		1B04B958B93E40DAAFDED11A /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				SDKROOT = "";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SYMROOT = /Users/kanishksharma/Downloads/BlackHoleGPU/build/build;
+			};
+			name = MinSizeRel;
+		};
+		1BC5D8317CF942ADAD5A0050 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/kanishksharma/Downloads/BlackHoleGPU/build/Release;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				FRAMEWORK_SEARCH_PATHS = (/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.0.sdk/System/Library/Frameworks,"$(inherited)");
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/kanishksharma/Downloads/BlackHoleGPU/src,"/Users/kanishksharma/Downloads/BlackHoleGPU/vendor/metal-cpp",/Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glm,/Users/kanishksharma/Downloads/BlackHoleGPU/vendor/imgui,/Users/kanishksharma/Downloads/BlackHoleGPU/vendor/imgui/backends,/Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/include,"$(inherited)");
+				INFOPLIST_FILE = /Users/kanishksharma/Downloads/BlackHoleGPU/build/CMakeFiles/BlackHole.dir/Info.plist;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG '-std=gnu++17' ";
+				OTHER_LDFLAGS = (" -Wl,-search_paths_first -Wl,-headerpad_max_install_names",/Users/kanishksharma/Downloads/BlackHoleGPU/build/vendor/glfw/src/Release/libglfw3.a,"-framework Metal","-framework Foundation","-framework QuartzCore","-framework GameController","-framework AVFoundation","-framework CoreMedia","-framework CoreVideo","-framework Cocoa","-framework IOKit","-framework CoreFoundation","-framework QuartzCore","-lobjc","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = BlackHole;
+				SECTORDER_FLAGS = "";
+				TARGET_TEMP_DIR = "/Users/kanishksharma/Downloads/BlackHoleGPU/build/build/BlackHole.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		233D1F92C0B7472398367D8E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		238004F36F4A4D69B167F733 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = update_mappings;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		29BBFF8DD71E47FDA505DA02 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		2AA475E5D2054579AE5BA2A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		2E4903A3FC7445A8A547AA4E /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/kanishksharma/Downloads/BlackHoleGPU/build/RelWithDebInfo;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				FRAMEWORK_SEARCH_PATHS = (/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.0.sdk/System/Library/Frameworks,"$(inherited)");
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/kanishksharma/Downloads/BlackHoleGPU/src,"/Users/kanishksharma/Downloads/BlackHoleGPU/vendor/metal-cpp",/Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glm,/Users/kanishksharma/Downloads/BlackHoleGPU/vendor/imgui,/Users/kanishksharma/Downloads/BlackHoleGPU/vendor/imgui/backends,/Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/include,"$(inherited)");
+				INFOPLIST_FILE = /Users/kanishksharma/Downloads/BlackHoleGPU/build/CMakeFiles/BlackHole.dir/Info.plist;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = "       -DNDEBUG '-std=gnu++17' ";
+				OTHER_LDFLAGS = (" -Wl,-search_paths_first -Wl,-headerpad_max_install_names",/Users/kanishksharma/Downloads/BlackHoleGPU/build/vendor/glfw/src/RelWithDebInfo/libglfw3.a,"-framework Metal","-framework Foundation","-framework QuartzCore","-framework GameController","-framework AVFoundation","-framework CoreMedia","-framework CoreVideo","-framework Cocoa","-framework IOKit","-framework CoreFoundation","-framework QuartzCore","-lobjc","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = BlackHole;
+				SECTORDER_FLAGS = "";
+				TARGET_TEMP_DIR = "/Users/kanishksharma/Downloads/BlackHoleGPU/build/build/BlackHole.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		3421C0DB1F9C4EFA9EAEB83F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				SDKROOT = "";
+				SYMROOT = /Users/kanishksharma/Downloads/BlackHoleGPU/build/build;
+			};
+			name = Debug;
+		};
+		4BA74D19E2034FCCB325FCE0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = update_mappings;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		5F4CCB0AC02E4541926A8E7C /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		7A4424E3EE22402DAB951AC1 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = uninstall;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		8727B3361DE84DA48C1FEB12 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		98E3DAF76C694546899EE884 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = uninstall;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		9F84A6B15AF343EDAD38A736 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				SDKROOT = "";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SYMROOT = /Users/kanishksharma/Downloads/BlackHoleGPU/build/build;
+			};
+			name = Release;
+		};
+		B708763C155543DD85F25035 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		BD83547EFB6D494EABA1D16B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/kanishksharma/Downloads/BlackHoleGPU/build/vendor/glfw/src/Debug;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",_GLFW_COCOA,"$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/include,/Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src,/Users/kanishksharma/Downloads/BlackHoleGPU/build/vendor/glfw/src,"$(inherited)");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = ("   '-std=c99' -fPIC -Wall ","$(inherited)");
+				OTHER_LIBTOOLFLAGS = ("");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = glfw3;
+				SECTORDER_FLAGS = "";
+				TARGET_TEMP_DIR = "/Users/kanishksharma/Downloads/BlackHoleGPU/build/build/glfw.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		C3B83934C97942FA8D8404F3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = update_mappings;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		C466593589AE423ABAC274A4 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/kanishksharma/Downloads/BlackHoleGPU/build/vendor/glfw/src/RelWithDebInfo;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",_GLFW_COCOA,"$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/include,/Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/src,/Users/kanishksharma/Downloads/BlackHoleGPU/build/vendor/glfw/src,"$(inherited)");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = ("       -DNDEBUG '-std=c99' -fPIC -Wall ","$(inherited)");
+				OTHER_LIBTOOLFLAGS = ("");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = glfw3;
+				SECTORDER_FLAGS = "";
+				TARGET_TEMP_DIR = "/Users/kanishksharma/Downloads/BlackHoleGPU/build/build/glfw.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		CB5FBD95D23A4D7D85511652 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = uninstall;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		D4D0849FC80442978ABDA196 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = uninstall;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		D50417BBA5C6459487BC6B8B /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/kanishksharma/Downloads/BlackHoleGPU/build/MinSizeRel;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				FRAMEWORK_SEARCH_PATHS = (/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.0.sdk/System/Library/Frameworks,"$(inherited)");
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/kanishksharma/Downloads/BlackHoleGPU/src,"/Users/kanishksharma/Downloads/BlackHoleGPU/vendor/metal-cpp",/Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glm,/Users/kanishksharma/Downloads/BlackHoleGPU/vendor/imgui,/Users/kanishksharma/Downloads/BlackHoleGPU/vendor/imgui/backends,/Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/include,"$(inherited)");
+				INFOPLIST_FILE = /Users/kanishksharma/Downloads/BlackHoleGPU/build/CMakeFiles/BlackHole.dir/Info.plist;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG '-std=gnu++17' ";
+				OTHER_LDFLAGS = (" -Wl,-search_paths_first -Wl,-headerpad_max_install_names",/Users/kanishksharma/Downloads/BlackHoleGPU/build/vendor/glfw/src/MinSizeRel/libglfw3.a,"-framework Metal","-framework Foundation","-framework QuartzCore","-framework GameController","-framework AVFoundation","-framework CoreMedia","-framework CoreVideo","-framework Cocoa","-framework IOKit","-framework CoreFoundation","-framework QuartzCore","-lobjc","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = BlackHole;
+				SECTORDER_FLAGS = "";
+				TARGET_TEMP_DIR = "/Users/kanishksharma/Downloads/BlackHoleGPU/build/build/BlackHole.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		D6E44D3D26F349458C2A9CDB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		DEE1AD2A48C440BA9C238CF1 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		DF336F0341DB40B1AC4DB413 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/kanishksharma/Downloads/BlackHoleGPU/build/Debug;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				FRAMEWORK_SEARCH_PATHS = (/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.0.sdk/System/Library/Frameworks,"$(inherited)");
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/kanishksharma/Downloads/BlackHoleGPU/src,"/Users/kanishksharma/Downloads/BlackHoleGPU/vendor/metal-cpp",/Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glm,/Users/kanishksharma/Downloads/BlackHoleGPU/vendor/imgui,/Users/kanishksharma/Downloads/BlackHoleGPU/vendor/imgui/backends,/Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/include,"$(inherited)");
+				INFOPLIST_FILE = /Users/kanishksharma/Downloads/BlackHoleGPU/build/CMakeFiles/BlackHole.dir/Info.plist;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = "   '-std=gnu++17' ";
+				OTHER_LDFLAGS = (" -Wl,-search_paths_first -Wl,-headerpad_max_install_names",/Users/kanishksharma/Downloads/BlackHoleGPU/build/vendor/glfw/src/Debug/libglfw3.a,"-framework Metal","-framework Foundation","-framework QuartzCore","-framework GameController","-framework AVFoundation","-framework CoreMedia","-framework CoreVideo","-framework Cocoa","-framework IOKit","-framework CoreFoundation","-framework QuartzCore","-lobjc","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = BlackHole;
+				SECTORDER_FLAGS = "";
+				TARGET_TEMP_DIR = "/Users/kanishksharma/Downloads/BlackHoleGPU/build/build/BlackHole.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		EA42693E2979404CA5D66388 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		FB518665285D4A0DBC862E0A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		FBD26A1A9CEF4F8D9E31A0D5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -1419,264 +1599,93 @@ exit 0";
 			};
 			name = Release;
 		};
-		AAEE3849D7F7468899A0E308 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = arm64;
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				ONLY_ACTIVE_ARCH = NO;
-				OTHER_LDFLAGS = ("","$(inherited)");
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ALL_BUILD;
-				SECTORDER_FLAGS = "";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = Release;
-		};
-		AB5144D68DBA44EF8DC68477 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = arm64;
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				ONLY_ACTIVE_ARCH = NO;
-				OTHER_LDFLAGS = ("","$(inherited)");
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = uninstall;
-				SECTORDER_FLAGS = "";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = Release;
-		};
-		AC01194512554D679A0EB0B8 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = arm64;
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				ONLY_ACTIVE_ARCH = NO;
-				OTHER_LDFLAGS = ("","$(inherited)");
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = update_mappings;
-				SECTORDER_FLAGS = "";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = Debug;
-		};
-		AE160372C90247DF8D16C519 /* RelWithDebInfo */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = arm64;
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				ONLY_ACTIVE_ARCH = NO;
-				OTHER_LDFLAGS = ("","$(inherited)");
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = update_mappings;
-				SECTORDER_FLAGS = "";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = RelWithDebInfo;
-		};
-		B85BE83FF6434D92B7463D8E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = arm64;
-				SDKROOT = "";
-				SYMROOT = /Users/kanishksharma/Downloads/BlackHoleGPU/build/build;
-			};
-			name = Debug;
-		};
-		B906B8BC953D4E8C9A38E9A3 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = arm64;
-				COMBINE_HIDPI_IMAGES = YES;
-				CONFIGURATION_BUILD_DIR = /Users/kanishksharma/Downloads/BlackHoleGPU/build/Debug;
-				EXECUTABLE_PREFIX = "";
-				EXECUTABLE_SUFFIX = "";
-				FRAMEWORK_SEARCH_PATHS = (/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.0.sdk/System/Library/Frameworks,"$(inherited)");
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				HEADER_SEARCH_PATHS = (/Users/kanishksharma/Downloads/BlackHoleGPU/src,"/Users/kanishksharma/Downloads/BlackHoleGPU/vendor/metal-cpp",/Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glm,/Users/kanishksharma/Downloads/BlackHoleGPU/vendor/imgui,/Users/kanishksharma/Downloads/BlackHoleGPU/vendor/imgui/backends,/Users/kanishksharma/Downloads/BlackHoleGPU/vendor/glfw/include,"$(inherited)");
-				INFOPLIST_FILE = /Users/kanishksharma/Downloads/BlackHoleGPU/build/CMakeFiles/BlackHole.dir/Info.plist;
-				INSTALL_PATH = "";
-				ONLY_ACTIVE_ARCH = NO;
-				OTHER_CPLUSPLUSFLAGS = "   '-std=gnu++17' ";
-				OTHER_LDFLAGS = (" -Wl,-search_paths_first -Wl,-headerpad_max_install_names",/Users/kanishksharma/Downloads/BlackHoleGPU/build/vendor/glfw/src/Debug/libglfw3.a,"-framework Metal","-framework Foundation","-framework QuartzCore","-framework GameController","-framework Cocoa","-framework IOKit","-framework CoreFoundation","-framework QuartzCore","-lobjc","$(inherited)");
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = BlackHole;
-				SECTORDER_FLAGS = "";
-				TARGET_TEMP_DIR = "/Users/kanishksharma/Downloads/BlackHoleGPU/build/build/BlackHole.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = Debug;
-		};
-		E946E5F0BA70453DA0B2EF6F /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = arm64;
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				ONLY_ACTIVE_ARCH = NO;
-				OTHER_LDFLAGS = ("","$(inherited)");
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ZERO_CHECK;
-				SECTORDER_FLAGS = "";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = Release;
-		};
-		F83B4D116C7443D2A0DB7F5D /* MinSizeRel */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = arm64;
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				INSTALL_PATH = "";
-				ONLY_ACTIVE_ARCH = NO;
-				OTHER_LDFLAGS = ("","$(inherited)");
-				OTHER_REZFLAGS = "";
-				PRODUCT_NAME = ALL_BUILD;
-				SECTORDER_FLAGS = "";
-				USE_HEADERMAP = NO;
-				WARNING_CFLAGS = ("$(inherited)");
-			};
-			name = MinSizeRel;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0D2219D3E0724494B6B8CC5B /* Build configuration list for PBXNativeTarget "BlackHole" */ = {
+		069A6CCFD59F4E45B18CE0F2 /* Build configuration list for PBXAggregateTarget "update_mappings" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B906B8BC953D4E8C9A38E9A3 /* Debug */,
-				12ADC928C7404769A266F866 /* Release */,
-				388C10802EBA4BAC895C5649 /* MinSizeRel */,
-				6692D355ABA84F8DACB9121A /* RelWithDebInfo */,
+				4BA74D19E2034FCCB325FCE0 /* Debug */,
+				C3B83934C97942FA8D8404F3 /* Release */,
+				0763DC1EBD7149CD90D1D095 /* MinSizeRel */,
+				238004F36F4A4D69B167F733 /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		8DE4AB9928A8486F80EF31F5 /* Build configuration list for PBXAggregateTarget "install" */ = {
+		1EDCEBE2D3F245AE8BB48F0F /* Build configuration list for PBXAggregateTarget "install" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3DA2F48C0F124B75A7C7AB76 /* Debug */,
-				4D972837BC914AC483906939 /* Release */,
-				26D0DC1A23114DF88FCBDEC5 /* MinSizeRel */,
-				6F45FD9EA1034FB7A6C2F081 /* RelWithDebInfo */,
+				D6E44D3D26F349458C2A9CDB /* Debug */,
+				FB518665285D4A0DBC862E0A /* Release */,
+				29BBFF8DD71E47FDA505DA02 /* MinSizeRel */,
+				DEE1AD2A48C440BA9C238CF1 /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		9188991AAC064BE8B188CF1E /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+		AC4185E1126444CF986EB5EB /* Build configuration list for PBXNativeTarget "BlackHole" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3878FF95163E4C82841A884E /* Debug */,
-				AAEE3849D7F7468899A0E308 /* Release */,
-				F83B4D116C7443D2A0DB7F5D /* MinSizeRel */,
-				7320406C0BE74A388F287E8C /* RelWithDebInfo */,
+				DF336F0341DB40B1AC4DB413 /* Debug */,
+				1BC5D8317CF942ADAD5A0050 /* Release */,
+				D50417BBA5C6459487BC6B8B /* MinSizeRel */,
+				2E4903A3FC7445A8A547AA4E /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		970332E6BBBD4EE1811DEC5C /* Build configuration list for PBXProject "BlackHoleGPU" */ = {
+		D096025FBBFB4E94A4F42112 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B85BE83FF6434D92B7463D8E /* Debug */,
-				20BBFBAD4FD146FBB48F2C45 /* Release */,
-				2EAE9E064A34497D83832696 /* MinSizeRel */,
-				6155B4A69EB54707AB6214C5 /* RelWithDebInfo */,
+				8727B3361DE84DA48C1FEB12 /* Debug */,
+				233D1F92C0B7472398367D8E /* Release */,
+				5F4CCB0AC02E4541926A8E7C /* MinSizeRel */,
+				B708763C155543DD85F25035 /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		BF4B359687024A5A8345A519 /* Build configuration list for PBXAggregateTarget "uninstall" */ = {
+		D6C0A83731264F03A36F26CA /* Build configuration list for PBXAggregateTarget "uninstall" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1B8D436E1E064A2AB8CE4950 /* Debug */,
-				AB5144D68DBA44EF8DC68477 /* Release */,
-				354C4599C0644DF9A7898AA2 /* MinSizeRel */,
-				7EE596B63A134F8ABE7A8069 /* RelWithDebInfo */,
+				CB5FBD95D23A4D7D85511652 /* Debug */,
+				D4D0849FC80442978ABDA196 /* Release */,
+				98E3DAF76C694546899EE884 /* MinSizeRel */,
+				7A4424E3EE22402DAB951AC1 /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		D9B4E4DF0AE94528B80DF670 /* Build configuration list for PBXNativeTarget "glfw" */ = {
+		D78F6188C8F240C9ADDCE015 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				24D578BE2BAF426A91DD6C01 /* Debug */,
-				91C9E04A16CD430788589710 /* Release */,
-				73C9247C923140999EC46CD7 /* MinSizeRel */,
-				1B75BBEC5C9F42E2886A92ED /* RelWithDebInfo */,
+				EA42693E2979404CA5D66388 /* Debug */,
+				2AA475E5D2054579AE5BA2A5 /* Release */,
+				16A8D60C894A496082CFD006 /* MinSizeRel */,
+				1347F083D6904AEF8D1D071E /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		ED0E6B234F20405887011064 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+		EA5FDCBBA82A425BBC5C8475 /* Build configuration list for PBXProject "BlackHoleGPU" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3E3978082828423D9234908F /* Debug */,
-				E946E5F0BA70453DA0B2EF6F /* Release */,
-				812C962CE534475A9437896E /* MinSizeRel */,
-				58055FA509D640B18B1DBFBF /* RelWithDebInfo */,
+				3421C0DB1F9C4EFA9EAEB83F /* Debug */,
+				9F84A6B15AF343EDAD38A736 /* Release */,
+				1B04B958B93E40DAAFDED11A /* MinSizeRel */,
+				0D888E2DC8F54EA3B85CA820 /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
-		F9645D2C8637402AA39A2970 /* Build configuration list for PBXAggregateTarget "update_mappings" */ = {
+		F2193B615A55450D9BDAFE60 /* Build configuration list for PBXNativeTarget "glfw" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AC01194512554D679A0EB0B8 /* Debug */,
-				14FBEC4903EF41129BF5D30C /* Release */,
-				1082498237EA4BA5BD28A371 /* MinSizeRel */,
-				AE160372C90247DF8D16C519 /* RelWithDebInfo */,
+				BD83547EFB6D494EABA1D16B /* Debug */,
+				FBD26A1A9CEF4F8D9E31A0D5 /* Release */,
+				075C8304AD28458983CD8068 /* MinSizeRel */,
+				C466593589AE423ABAC274A4 /* RelWithDebInfo */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;

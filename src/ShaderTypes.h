@@ -94,6 +94,12 @@ typedef struct
     // Background star effects
     bool background_redshift;       // Apply gravitational redshift to background
     bool background_doppler;        // Apply Doppler shift to background
+    
+    // Performance parameters
+    int quality_preset;             // 0=Low, 1=Medium, 2=High, 3=Ultra
+    int max_iterations;             // Maximum ray marching steps (64-1024)
+    float step_size;                // Integration step size (0.05-0.2)
+    bool adaptive_stepping;         // Use adaptive step size based on curvature
 } Uniforms;
 
 #endif

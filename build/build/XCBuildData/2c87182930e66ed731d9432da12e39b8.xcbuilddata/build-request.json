@@ -27,7 +27,7 @@
         "table" : {
           "ACTION" : "build",
           "COLOR_DIAGNOSTICS" : "YES",
-          "diagnostic_message_length" : "45",
+          "diagnostic_message_length" : "48",
           "ENABLE_PREVIEWS" : "NO",
           "ENABLE_XOJIT_PREVIEWS" : "NO",
           "TOOLCHAINS" : "com.apple.dt.toolchain.Metal.32023 $(inherited)"
