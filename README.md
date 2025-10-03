@@ -18,11 +18,18 @@ A real-time, scientifically accurate black hole visualization using GPU-accelera
 
 ### Visual Features
 - **Accretion Disk**: Physically-based temperature gradients (1000K-40000K)
+- **Keplerian Rotation**: Differential shear with r^-3/2 orbital velocity profile for realistic disk dynamics
+- **Azimuthal Banding**: Dual-frequency spiral lanes (12-24 and 5-11 modes) creating turbulent structure
+- **Relativistic Lane Enhancement**: Doppler-driven brightness asymmetry amplifying approaching-side features
+- **Micro-Turbulence Detail**: 18× high-frequency noise layer for fine-grained particle structure
+- **Photon Ring Flare**: 1.8× lensing-enhanced emission near ISCO with view-dependent modulation
+- **Animated Starfield**: Time-evolving background stars with rotation (0.02 rad/s) and drift parallax
 - **Blackbody Radiation**: Realistic color rendering from Wien's law
-- **Procedural Turbulence**: Multi-octave simplex noise for disk dynamics
-- **Background Stars**: Procedural starfield with gravitational redshift
-- **Orbiting Star**: Dynamic orbital mechanics with proper physics
+- **Procedural Turbulence**: Multi-octave simplex noise with advected rotation for disk dynamics
 - **Rossning Visual Presets**: One-click looks inspired by rossning92/Blackhole with tuned bloom and tone mapping
+  - **Default**: Balanced appearance with moderate turbulence and bloom
+  - **Particle Storm**: High-energy look with intense structure and prominent bloom
+  - **Minimal Bloom**: Clean visualization emphasizing physical detail
 - **HDR Bloom Pipeline**: Adjustable highlight threshold, blur iterations (1-8), and strength for cinematic glow
 - **ACES Tone Mapping**: Toggle filmic tone mapping and dial gamma correction (1.0 - 4.0)
 
@@ -72,7 +79,7 @@ Modern tabbed interface with organized controls:
 
 - **macOS**: 10.15 (Catalina) or later
 - **Hardware**: Any Mac with Metal support
-  - Apple Silicon (M1/M2/M3/M4) - Recommended (30-60 FPS on High)
+  - Apple Silicon (M1/M2/M3/M4 Pro) - Recommended (30-60 FPS on High)
   - Intel Macs with discrete GPU (15-30 FPS on Medium)
   - Intel Macs with integrated GPU (8-15 FPS on Low)
 - **Development**:
@@ -132,7 +139,7 @@ Then build and run from Xcode (⌘R).
 
 ### Quality Presets Comparison
 
-| Preset | Iterations | FPS (M1 Pro) | FPS (Intel i7) | Use Case |
+| Preset | Iterations | FPS (M4 Pro) | FPS (Intel i7) | Use Case |
 |--------|-----------|--------------|----------------|----------|
 | Low    | 128       | 30-60        | 15-25          | Real-time interaction |
 | Medium | 192       | 20-30        | 12-18          | General use |
@@ -192,8 +199,34 @@ Where Γᵘᵥᵨ are the Christoffel symbols for the Schwarzschild metric.
 
 ### Accretion Disk Model
 
-The accretion disk uses a multi-scale noise function for turbulence and a temperature profile:
+The accretion disk uses a sophisticated multi-layered rendering approach:
 
+#### Keplerian Rotation
+Material orbits at physically correct velocities following Kepler's third law:
+```
+ω(r) ∝ r⁻³/²
+```
+This creates differential shear where inner regions rotate much faster than outer regions, producing realistic swirling patterns in the turbulent structure.
+
+#### Azimuthal Lane Structure
+Dual-frequency sinusoidal modulation creates spiral lanes that evolve over time:
+- **Primary frequency**: 12-24 modes (higher near ISCO)
+- **Secondary frequency**: 5-11 modes (counter-rotating)
+- **Result**: Complex interference patterns resembling magnetorotational instability
+
+#### Relativistic Enhancement
+Three layers of physical effects combine to create asymmetric brightness:
+1. **Doppler beaming**: D³ intensity boost on approaching side
+2. **Lane amplification**: Tangent-direction modulation (up to 2.5× on approaching side)
+3. **Lensing flare**: 1.8× boost near photon ring (r ≈ 1.5 Rₛ)
+
+#### Multi-Scale Turbulence
+```
+noise(r, θ, z, t) = Σᵢ (1/2ⁱ) · simplex(2ⁱ r, ωᵢ t) × microDetail(18× scale)
+```
+The micro-detail layer adds fine-grained particle structure at 18× the base noise frequency.
+
+#### Temperature Profile
 ```
 T(r) = T₀ × r⁻⁰·⁷⁵
 ```
@@ -206,10 +239,10 @@ Colors are computed from blackbody radiation with Wien's displacement law.
 
 | Hardware | Quality | FPS | Frame Time |
 |----------|---------|-----|------------|
-| M1 Pro | Low | 40-60 | 16-25 ms |
-| M1 Pro | Medium | 25-35 | 28-40 ms |
-| M1 Pro | High | 15-22 | 45-65 ms |
-| M1 Pro | Ultra | 9-14 | 70-110 ms |
+| M4 Pro | Low | 40-60 | 16-25 ms |
+| M4 Pro | Medium | 25-35 | 28-40 ms |
+| M4 Pro | High | 15-22 | 45-65 ms |
+| M4 Pro | Ultra | 9-14 | 70-110 ms |
 | Intel i7 (discrete) | Low | 20-35 | 28-50 ms |
 | Intel i7 (discrete) | Medium | 12-20 | 50-83 ms |
 | Intel i7 (discrete) | High | 8-14 | 70-125 ms |

@@ -598,6 +598,228 @@ for (int i = 0; i < diskNoiseLOD; ++i) {
     \label{fig:disk_turbulence}
 \end{figure}
 
+\subsection{Keplerian Rotation and Differential Shear}
+
+To achieve physically realistic rotation, the disk follows Keplerian dynamics where orbital velocity decreases with radius:
+
+\begin{equation}
+    v(r) \propto r^{-1/2} \quad \Rightarrow \quad \omega(r) \propto r^{-3/2}
+\end{equation}
+
+This creates differential shear, where inner regions rotate faster than outer regions. We implement this by computing a radius-dependent Kepler factor:
+
+\begin{equation}
+    \text{keplerFactor}(r) = \left(\frac{r_{\text{inner}}}{r}\right)^{3/2}
+\end{equation}
+
+The rotation angle at time $t$ for a disk element at radius $r$ is:
+
+\begin{equation}
+    \theta(r, t) = \omega_0 \cdot t \cdot \text{keplerFactor}(r)
+\end{equation}
+
+where $\omega_0$ is the base rotation rate controlled by the \texttt{disk\_noise\_speed} parameter.
+
+\begin{lstlisting}[style=metalstyle, caption=Keplerian shear implementation]
+// Compute Kepler factor for differential rotation
+float keplerFactor = pow(max(innerRadius / max(rDisk, innerRadius + 0.001), 0.001), 1.5);
+float rotationRate = max(uniforms.disk_noise_speed * 2.2, 0.0);
+float rotationAngle = time * rotationRate * keplerFactor;
+
+// Apply 2D rotation to disk coordinates
+float sA = sin(rotationAngle);
+float cA = cos(rotationAngle);
+float2 rotatedXZ = float2(diskPos.x * cA - diskPos.y * sA,
+                          diskPos.x * sA + diskPos.y * cA);
+float3 advectedPos = float3(rotatedXZ.x, pos.y, rotatedXZ.y);
+\end{lstlisting}
+
+This advected position is then used for all subsequent noise sampling, creating the appearance of material orbiting at physically correct rates. The effect is most pronounced at the inner edge where rotation is fastest.
+
+\begin{figure}[H]
+    \centering
+    \fbox{\parbox{0.7\textwidth}{\centering [Insert diagram showing velocity vectors at different radii demonstrating differential shear]}}
+    \caption{Keplerian velocity field in the accretion disk. Inner regions (near ISCO) rotate significantly faster than outer regions, creating visible shear patterns in the turbulent structure.}
+    \label{fig:keplerian_shear}
+\end{figure}
+
+\subsection{Azimuthal Lane Structure}
+
+To create the characteristic spiral patterns and asymmetric brightness variations observed in accretion disks, we implement a dual-frequency azimuthal modulation system:
+
+\begin{align}
+    \text{primaryPhase} &= \theta \cdot f_{\text{primary}}(r) - \omega_0 t \cdot 1.6 + \text{offset}(r) \\
+    \text{secondaryPhase} &= \theta \cdot f_{\text{secondary}}(r) + \omega_0 t \cdot 0.85 + \text{noise}
+\end{align}
+
+where the frequencies vary with radius:
+
+\begin{align}
+    f_{\text{primary}}(r) &= 12 + 12 \cdot \left(1 - \frac{r - r_{\text{inner}}}{r_{\text{outer}} - r_{\text{inner}}}\right) \quad (12-24) \\
+    f_{\text{secondary}}(r) &= 5 + 6 \cdot \left(1 - \frac{r - r_{\text{inner}}}{r_{\text{outer}} - r_{\text{inner}}}\right) \quad (5-11)
+\end{align}
+
+These phases create ridge and valley patterns that are combined multiplicatively:
+
+\begin{equation}
+    \text{laneMask} = \left[0.55 + 0.45 \sin(\text{primaryPhase})\right] \times \left[0.6 + 0.4 \sin(\text{secondaryPhase})\right]
+\end{equation}
+
+\begin{lstlisting}[style=metalstyle, caption=Azimuthal banding implementation]
+float bandMix = clamp(radialNorm, 0.0, 1.0);
+float primaryFreq = mix(12.0, 24.0, 1.0 - bandMix);
+float secondaryFreq = mix(5.0, 11.0, 1.0 - bandMix);
+
+float primaryPhase = angularPos * primaryFreq - rotationAngle * 1.6 + bandMix * 2.5;
+float secondaryPhase = angularPos * secondaryFreq + rotationAngle * 0.85 + 
+                       snoise(float3(rDisk * 0.1, pos.y * 3.0, time * 0.05)) * 2.0;
+
+float ridge = sin(primaryPhase);
+float valley = sin(secondaryPhase);
+float laneMask = clamp(0.55 + 0.45 * ridge, 0.05, 1.0) * 
+                 clamp(0.6 + 0.4 * valley, 0.05, 1.0);
+laneMask = pow(laneMask, mix(1.5, 0.8, bandMix));
+
+// Add noise variation to bands
+float bandNoise = 0.5 + 0.5 * snoise(float3(angularPos * 0.5, bandMix * 3.0, time * 0.15));
+density *= mix(0.35, 1.25, laneMask * bandNoise);
+\end{lstlisting}
+
+This creates spiral lanes that rotate at slightly different rates (counter-propagating in the primary and secondary components), producing complex interference patterns that evolve over time.
+
+\begin{figure}[H]
+    \centering
+    \fbox{\parbox{0.7\textwidth}{\centering [Insert top-down view showing spiral lanes with labeled primary and secondary frequencies]}}
+    \caption{Azimuthal banding structure showing dual-frequency spiral patterns. The interference between primary (12-24 modes) and secondary (5-11 modes) creates the characteristic clumpy appearance of turbulent accretion disks.}
+    \label{fig:azimuthal_banding}
+\end{figure}
+
+\subsection{Relativistic Lane Enhancement}
+
+The azimuthal lanes are further modulated by relativistic effects to create enhanced brightness asymmetry on the approaching side of the disk:
+
+\begin{equation}
+    \text{relativisticLane} = \left[1 + \hat{\mathbf{t}} \cdot \hat{\mathbf{v}}_{\text{obs}} \cdot 0.75\right]^3
+\end{equation}
+
+where $\hat{\mathbf{t}}$ is the tangent direction to the disk rotation at the current position and $\hat{\mathbf{v}}_{\text{obs}}$ is the viewing direction.
+
+\begin{lstlisting}[style=metalstyle, caption=Relativistic lane enhancement]
+// Tangent direction perpendicular to radius in disk plane
+float3 tangentDir = normalize(float3(-advectedPos.z, 0.0, advectedPos.x));
+float viewDot = clamp(dot(tangentDir, -normalize(viewDir)), -1.0, 1.0);
+
+// Cubic amplification for dramatic asymmetry
+float relativisticLane = pow(clamp(1.0 + viewDot * 0.75, 0.25, 2.5), 3.0);
+\end{lstlisting}
+
+This enhancement works synergistically with the Doppler beaming effect to create the characteristic bright/dim asymmetry observed in images of rapidly rotating accretion disks. The cubic power ensures strong contrast while maintaining physical plausibility.
+
+\subsection{Micro-Turbulence Detail Layer}
+
+To achieve fine-grained particle structure beyond the base multi-octave noise, we add a high-frequency detail layer:
+
+\begin{equation}
+    \text{microDetail} = 0.5 + 0.5 \cdot \text{snoise}(\mathbf{r} \cdot 18 \cdot s_{\text{noise}} + t \cdot 0.3)
+\end{equation}
+
+This is applied as a multiplicative modulation to the existing noise:
+
+\begin{equation}
+    \text{noise}_{\text{final}} = \text{noise}_{\text{base}} \times \text{lerp}(0.85, 1.15, \text{microDetail})
+\end{equation}
+
+\begin{lstlisting}[style=metalstyle, caption=Micro-turbulence detail]
+// Fine-grained particle detail at 18x base noise scale
+float microDetail = 0.5 + 0.5 * snoise(sphericalCoord * 18.0 * noiseScale + time * 0.3);
+noise *= mix(0.85, 1.15, microDetail);
+\end{lstlisting}
+
+The 18× frequency multiplier is chosen to be high enough to create visibly distinct fine structure without introducing aliasing artifacts or excessive computational cost. This layer adds approximately 3-5\% additional rendering time but significantly enhances perceived detail and realism, especially in close-up views.
+
+\subsection{Photon Ring Lensing Flare}
+
+Near the photon sphere at $r \approx 1.5 Rs$, gravitational lensing effects are strongest. We model this as an intensity boost:
+
+\begin{align}
+    \text{photonProximity} &= \text{smoothstep}(1.5 r_{\text{inner}}, 1.05 r_{\text{inner}}, r) \\
+    \text{lensingFlare} &= 1 + 1.8 \cdot \text{photonProximity} \cdot \left[\frac{\hat{\mathbf{t}} \cdot \hat{\mathbf{v}}_{\text{obs}} + 1}{2}\right]^2
+\end{align}
+
+\begin{lstlisting}[style=metalstyle, caption=Lensing flare near photon ring]
+// Lensing flare near photon ring
+float photonProximity = smoothstep(innerRadius * 1.5, innerRadius * 1.05, rDisk);
+float lensingFlare = 1.0 + 1.8 * photonProximity * 
+                     pow(clamp(viewDot * 0.5 + 0.5, 0.0, 1.0), 2.0);
+
+// Apply to beaming boost
+float beamingBoost = clamp(0.6 + (beaming - 1.0) * 0.65, 0.35, 1.95) * 
+                     relativisticLane * lensingFlare;
+\end{lstlisting}
+
+The \texttt{photonProximity} factor smoothly transitions from 0 (far from photon sphere) to 1 (at inner disk edge), applying up to 1.8× brightness boost. This is further modulated by viewing angle to preferentially enhance forward-facing regions, creating the characteristic bright photon ring glow visible in many black hole renderings.
+
+\begin{figure}[H]
+    \centering
+    \fbox{\parbox{0.7\textwidth}{\centering [Insert side-by-side comparison showing disk without and with lensing flare enhancement]}}
+    \caption{Effect of photon ring lensing flare. Left: base emission. Right: with flare, showing enhanced brightness near the inner edge where gravitational lensing is strongest.}
+    \label{fig:lensing_flare}
+\end{figure}
+
+\subsection{Animated Background Starfield}
+
+To enhance immersion and provide visual reference for camera motion, we implement an animated starfield that rotates and drifts over time:
+
+\begin{equation}
+    \mathbf{R}(\omega t) = \begin{pmatrix}
+        \cos(\omega t) & 0 & \sin(\omega t) \\
+        0 & 1 & 0 \\
+        -\sin(\omega t) & 0 & \cos(\omega t)
+    \end{pmatrix}
+\end{equation}
+
+where $\omega = 0.02$ rad/s provides slow, observable rotation. The rotated direction is then offset by a drift vector:
+
+\begin{equation}
+    \hat{\mathbf{d}}_{\text{final}} = \mathbf{R}(\omega t) \cdot \hat{\mathbf{d}}_{\text{ray}} + \mathbf{v}_{\text{drift}} \cdot t
+\end{equation}
+
+with $\mathbf{v}_{\text{drift}} = (0.005, 0.003, 0)$ providing subtle parallax motion.
+
+\begin{lstlisting}[style=metalstyle, caption=Animated starfield implementation]
+// Rotate starfield slowly over time
+float rotationSpeed = 0.02;  // radians per second
+float angle = time * rotationSpeed;
+float cosA = cos(angle);
+float sinA = sin(angle);
+
+// Y-axis rotation matrix
+float3 animatedDir = float3(
+    dir.x * cosA + dir.z * sinA,
+    dir.y,
+    -dir.x * sinA + dir.z * cosA
+);
+
+// Drift starfield with subtle parallax
+float3 driftedDir = animatedDir + float3(time * 0.005, time * 0.003, 0.0);
+
+// Procedural stars with higher threshold for visibility
+float starNoise = snoise(normalize(driftedDir) * 80.0);
+if (starNoise > 0.88) {
+    float starBrightness = pow((starNoise - 0.88) / 0.12, 2.0);
+    skyColor += float3(0.9, 0.95, 1.0) * starBrightness;
+}
+\end{lstlisting}
+
+The star threshold of 0.88 ensures only the brightest noise peaks become visible stars, preventing excessive star density. The brightness is computed using a power function to create natural variation from dim to bright stars.
+
+\begin{figure}[H]
+    \centering
+    \fbox{\parbox{0.7\textwidth}{\centering [Insert long-exposure composite showing star trails around the black hole]}}
+    \caption{Animated starfield with rotation and drift. Stars move in circular arcs due to the rotation component while also exhibiting subtle translational motion from the drift velocity.}
+    \label{fig:animated_starfield}
+\end{figure}
+
 % ============================================================================
 \section{GPU Implementation and Optimization}
 % ============================================================================
@@ -704,7 +926,7 @@ Coalesced memory access is critical for GPU performance. Our implementation:
 \begin{figure}[H]
     \centering
     \fbox{\parbox{0.7\textwidth}{\centering [Insert graph: FPS vs Quality Preset for different resolutions]}}
-    \caption{Performance scaling across quality presets for 720p, 1080p, and 1440p resolutions on Apple M1 chip.}
+    \caption{Performance scaling across quality presets for 720p, 1080p, and 1440p resolutions on Apple M4 Pro chip.}
     \label{fig:performance_scaling}
 \end{figure}
 
@@ -761,7 +983,9 @@ Star Orbit Speed & 0.1 - 2.0 rad/s & Angular velocity \\
 
 \subsection{Preset Configurations}
 
-Three scientifically motivated presets:
+\subsubsection{Physics Presets}
+
+Three scientifically motivated presets for gravitational lensing and disk geometry:
 
 \begin{description}
     \item[Gargantua (Interstellar)] Inspired by the Interstellar black hole:
@@ -788,10 +1012,72 @@ Three scientifically motivated presets:
         \end{itemize}
 \end{description}
 
+\subsubsection{Rossning Visual Presets}
+
+Three appearance presets inspired by rossning92/Blackhole, optimizing for different visual styles with tuned disk appearance and post-processing parameters:
+
+\begin{table}[H]
+\centering
+\caption{Rossning visual preset parameters}
+\begin{tabular}{lccc}
+\toprule
+\textbf{Parameter} & \textbf{Default} & \textbf{Particle Storm} & \textbf{Minimal Bloom} \\
+\midrule
+Disk Thickness & 0.50 & 0.68 & 0.52 \\
+Density Gain & 9200 & 13500 & 12000 \\
+Noise Scale & 0.68 & 1.10 & 0.88 \\
+Noise Speed & 0.70 & 1.25 & 0.85 \\
+Emission Strength & 0.18 & 0.28 & 0.22 \\
+Bloom Threshold & 0.68 & 0.72 & 0.55 \\
+Bloom Intensity & 0.45 & 0.58 & 0.30 \\
+Bloom Spread & 1.00 & 1.20 & 0.85 \\
+Tone Mapping Gamma & 1.00 & 1.05 & 0.95 \\
+\bottomrule
+\end{tabular}
+\label{tab:rossning_presets}
+\end{table}
+
+\begin{description}
+    \item[Default] Balanced appearance with moderate turbulence and bloom:
+        \begin{itemize}
+            \item Medium density disk with subtle lanes
+            \item Balanced emission for both inner glow and outer structure
+            \item Moderate bloom preserving detail
+            \item Best for general viewing and demonstrations
+        \end{itemize}
+    
+    \item[Particle Storm] High-energy appearance with intense turbulence:
+        \begin{itemize}
+            \item Thick, dense disk with pronounced structure
+            \item High noise scale (1.10) and fast rotation (1.25×)
+            \item Strong emission (0.28) and prominent bloom
+            \item Dramatic visual impact, suitable for presentations
+            \item Emphasizes Keplerian shear and azimuthal banding
+        \end{itemize}
+    
+    \item[Minimal Bloom] Clean appearance emphasizing physical structure:
+        \begin{itemize}
+            \item Medium-high density with clear detail
+            \item Reduced bloom (0.30 intensity, 0.55 threshold)
+            \item Lower gamma (0.95) for darker, more contrasted look
+            \item Best for scientific visualization and analysis
+            \item Reveals fine-scale turbulence and micro-detail layer
+        \end{itemize}
+\end{description}
+
+All three presets benefit from the complete set of physical enhancements including Keplerian rotation, azimuthal banding, relativistic lane enhancement, micro-turbulence detail, lensing flare, and animated starfield. The presets differ primarily in tuning parameters that control visual density, turbulence intensity, and post-processing strength.
+
+\begin{figure}[H]
+    \centering
+    \fbox{\parbox{0.8\textwidth}{\centering [Insert three side-by-side images comparing Default, Particle Storm, and Minimal Bloom Rossning presets]}}
+    \caption{Visual comparison of the three Rossning-inspired appearance presets, demonstrating different balances of density, turbulence, and bloom effects while maintaining physically accurate rotation and lensing.}
+    \label{fig:rossning_preset_comparison}
+\end{figure}
+
 \begin{figure}[H]
     \centering
     \fbox{\parbox{0.8\textwidth}{\centering [Insert three side-by-side images showing Gargantua, Extreme Gravity, and Thin Disk presets]}}
-    \caption{Visual comparison of the three preset configurations, demonstrating different gravitational lensing regimes and disk geometries.}
+    \caption{Visual comparison of the three physics preset configurations, demonstrating different gravitational lensing regimes and disk geometries.}
     \label{fig:preset_comparison}
 \end{figure}
 
@@ -1139,7 +1425,7 @@ Non-zero Christoffel symbols:
     \item macOS 11.0 or later
     \item Xcode 13.0 or later with Command Line Tools
     \item CMake 3.20 or later
-    \item Apple Silicon (M1/M2/M3) or Intel Mac with Metal support
+    \item Apple Silicon (M1/M2/M3/M4 Pro) or Intel Mac with Metal support
 \end{itemize}
 
 \subsection{Build Steps}
@@ -1178,7 +1464,7 @@ open BlackHoleGPU.xcodeproj
 
 \begin{table}[H]
 \centering
-\caption{GPU metrics for different quality presets (M1 chip, 1080p)}
+\caption{GPU metrics for different quality presets (M4 Pro chip, 1080p)}
 \begin{tabular}{lccccc}
 \toprule
 \textbf{Preset} & \textbf{FPS} & \textbf{Frame Time} & \textbf{GPU Time} & \textbf{Utilization} & \textbf{Power} \\

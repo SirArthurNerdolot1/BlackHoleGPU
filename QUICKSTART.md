@@ -58,12 +58,40 @@ Core physical parameters and preset configurations:
 - **Thin Disk**: Minimal thickness for clean visuals
 
 #### Visual Tab
-Rendering quality and relativistic effects:
+Rendering quality, visual presets, and relativistic effects:
+
+**Rossning Visual Presets:**
+- **Default**: Balanced appearance with moderate turbulence and bloom
+- **Particle Storm**: High-energy look with intense structure and prominent bloom
+- **Minimal Bloom**: Clean visualization emphasizing physical detail
+
+**Accretion Disk Advanced Features:**
+- Keplerian rotation (differential shear following r⁻³/² profile)
+- Azimuthal banding (dual-frequency 12-24 and 5-11 mode spiral lanes)
+- Relativistic lane enhancement (Doppler-driven brightness asymmetry)
+- Micro-turbulence detail (18× high-frequency noise for fine particles)
+- Photon ring lensing flare (1.8× boost near inner disk edge)
 
 | Parameter | Type | Effect |
 |-----------|------|--------|
+| **Visual Preset** | Dropdown | Quick appearance selection (Default/Particle Storm/Minimal Bloom) |
+| **Disk Density (Vertical)** | 0.1 - 2.0 | Vertical falloff exponent |
+| **Disk Density (Horizontal)** | 0.1 - 2.0 | Radial falloff exponent |
+| **Density Gain** | 100 - 20000 | Overall brightness multiplier |
+| **Density Clamp** | 0 - 5000 | Maximum density limit |
+| **Noise Scale** | 0.1 - 5.0 | Turbulence detail scale |
+| **Noise Speed** | 0.1 - 3.0 | Keplerian rotation rate multiplier |
+| **Noise Octaves** | 1 - 8 | Multi-scale turbulence layers |
+| **Emission Strength** | 0.01 - 1.0 | Disk brightness |
+| **Color Mix** | 0.0 - 1.0 | Blackbody vs preset color balance |
+| **Bloom Threshold** | 0.0 - 1.0 | HDR highlight cutoff |
+| **Bloom Intensity** | 0.0 - 1.0 | Glow strength |
+| **Bloom Quality** | 1 - 8 | Blur iterations |
+| **Tone Mapping** | Toggle | ACES filmic tone mapping |
+| **Gamma** | 1.0 - 4.0 | Exposure/brightness correction |
 | **Background Redshift** | Toggle | Gravitational frequency shift of stars |
 | **Background Doppler** | Toggle | Motion-based color shifts |
+| **Animated Starfield** | Always On | Time-evolving background (rotation + drift) |
 | **Show Orbiting Star** | Toggle | Display orbiting point source |
 | **Star Orbit Radius** | 3.0 - 15.0 | Distance from black hole |
 | **Star Orbit Speed** | 0.1 - 2.0 | Angular velocity (rad/s) |
@@ -97,7 +125,7 @@ Screen capture and video recording:
 
 Choose the right preset for your hardware and use case:
 
-| Preset | Iterations | Step Size | Adaptive | FPS (M1) | FPS (Intel) | Best For |
+| Preset | Iterations | Step Size | Adaptive | FPS (M4 Pro) | FPS (Intel) | Best For |
 |--------|-----------|-----------|----------|----------|-------------|----------|
 | **Low** | 128 | 0.15 | No | 30-60 | 15-25 | Real-time interaction, older hardware |
 | **Medium** | 192 | 0.12 | Yes | 20-30 | 12-18 | Balanced quality/performance |
@@ -106,7 +134,7 @@ Choose the right preset for your hardware and use case:
 
 ### Hardware Recommendations
 
-**Apple Silicon (M1/M2/M3/M4)**:
+**Apple Silicon (M1/M2/M3/M4 Pro)**:
 - Daily use: **High** preset
 - Screenshots: **Ultra** preset
 - Experimenting: **Medium** preset

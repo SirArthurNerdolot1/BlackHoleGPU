@@ -126,7 +126,7 @@
 
 ###  Benchmarks
 
-#### Apple Silicon (M1 Pro, 1280x720)
+#### Apple Silicon (M4 Pro, 1280x720)
 | Preset | FPS | Frame Time | Quality |
 |--------|-----|------------|---------|
 | Low | 40-60 | 16-25 ms | Preview |

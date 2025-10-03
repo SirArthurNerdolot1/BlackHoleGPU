@@ -91,9 +91,36 @@ Advanced users can fine-tune in the "Visual" tab:
 - Thin Disk - Razor-thin accretion disk
 
 #### Visual Tab
-**Relativistic Effects:**
-- Background Redshift (gravitational frequency shift)
-- Background Doppler (velocity-based color shift)
+**Rossning Visual Presets:**
+- Default - Balanced appearance with moderate turbulence
+- Particle Storm - High-energy look with intense structure
+- Minimal Bloom - Clean visualization for scientific analysis
+
+**Accretion Disk Features:**
+- Keplerian rotation with differential shear (r⁻³/² orbital velocity)
+- Azimuthal banding with dual-frequency spiral lanes
+- Relativistic lane enhancement (Doppler-driven asymmetry)
+- Micro-turbulence detail (18× high-frequency particle structure)
+- Photon ring lensing flare (1.8× boost near ISCO)
+
+**Disk Appearance Controls:**
+- Vertical/Horizontal density falloff
+- Density gain and clamping
+- Noise scale and speed (with Keplerian tooltip)
+- Multi-octave noise layers
+- Emission strength
+- Alpha falloff
+- Inner radius multiplier and softness
+- Color mix (blackbody vs preset tint)
+
+**Post-Processing:**
+- HDR Bloom pipeline (threshold, intensity, spread, quality 1-8 iterations)
+- ACES tone mapping toggle with gamma correction (1.0 - 4.0)
+
+**Background:**
+- Animated starfield with rotation and drift
+- Redshift toggle (gravitational frequency shift)
+- Doppler shift toggle (velocity-based color shift)
 
 **Orbiting Star:**
 - Toggle visibility

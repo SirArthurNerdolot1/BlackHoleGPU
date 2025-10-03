@@ -53,7 +53,7 @@ Use this checklist when preparing Black Hole GPU for distribution.
 - [ ] Test on macOS 13.0+ (Ventura)
 - [ ] Test on macOS 14.0+ (Sonoma)
 - [ ] Test on Intel Mac
-- [ ] Test on Apple Silicon (M1/M2/M3)
+- [ ] Test on Apple Silicon (M1/M2/M3/M4 Pro)
 - [ ] Test with integrated GPU
 - [ ] Test with discrete GPU
 - [ ] Verify all sliders in full range
@@ -140,7 +140,16 @@ hdiutil create -volname "Black Hole GPU" \
 - Advanced relativistic effects
 
 ##  Features
-- 5 core interactive sliders
+- 4 quality presets (Low/Medium/High/Ultra) with 2-6× performance improvement
+- 3 Rossning visual presets for different appearance styles
+- Modern tabbed interface (Physics, Visual, Camera, Recording)
+- Keplerian rotation with differential shear (r⁻³/² velocity profile)
+- Azimuthal banding with dual-frequency spiral lanes
+- Relativistic lane enhancement and photon ring lensing flare
+- Micro-turbulence detail layer (18× high-frequency structure)
+- Animated starfield with rotation and drift parallax
+- HDR bloom pipeline with adjustable quality
+- ACES tone mapping with gamma control
 - Observer position and velocity controls
 - Orbiting star with gravitational redshift
 - Background star redshift and Doppler effects

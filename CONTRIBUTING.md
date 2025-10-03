@@ -184,7 +184,7 @@ When contributing physics-related changes:
 
 **Environment**:
 - macOS 14.2 Sonoma
-- MacBook Pro M1 Max
+- MacBook Pro M4 Pro
 - Build: Debug configuration
 
 **Steps to Reproduce**:
