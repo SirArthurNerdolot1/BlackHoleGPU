@@ -62,11 +62,20 @@ target_link_libraries(BlackHole PUBLIC
 )
 
 # --- Handle Metal Shaders ---
-# This ensures the .metal file is compiled and added to the app bundle
-set_source_files_properties(shaders/BlackHole.metal PROPERTIES 
+# This ensures the .metal files are compiled and added to the app bundle
+set_source_files_properties(
+    shaders/BlackHole.metal
+    shaders/bloom_brightness.metal  
+    shaders/tonemapping.metal
+    PROPERTIES 
     MACOSX_PACKAGE_LOCATION "Resources"
     COMPILE_FLAGS "-I${CMAKE_CURRENT_SOURCE_DIR}/src")
-target_sources(BlackHole PRIVATE shaders/BlackHole.metal)
+
+target_sources(BlackHole PRIVATE 
+    shaders/BlackHole.metal
+    shaders/bloom_brightness.metal
+    shaders/tonemapping.metal
+)
 
 # --- macOS Bundle Configuration ---
 # Set properties for macOS app bundle with proper Info.plist

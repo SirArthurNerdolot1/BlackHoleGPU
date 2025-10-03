@@ -62,15 +62,6 @@ constant float M = 1.0;     // Black hole mass (normalized)
 constant float c = 1.0;     // Speed of light (normalized)
 constant float TEMP_RANGE = 39000.0; // Temperature range: 1000K~40000K
 
-// Accretion disk parameters
-// These define the appearance and behavior of matter orbiting the black hole
-constant float diskHeight = 0.3;        // Vertical scale height
-constant float diskDensityV = 1.0;      // Vertical density falloff
-constant float diskDensityH = 2.0;      // Horizontal density falloff
-constant float diskNoiseScale = 1.0;    // Turbulence amplitude
-constant float diskSpeed = 0.5;         // Orbital velocity scale
-constant int diskNoiseLOD = 4;          // Noise octaves (level of detail)
-
 // Ray marching parameters
 // Control the balance between accuracy and performance
 constant float steps = 0.1;     // Integration step size (in Schwarzschild radii)
@@ -92,6 +83,20 @@ struct Uniforms {
     float disk_thickness;           // Disk vertical extent
     float black_hole_size;          // Schwarzschild radius
     float camera_distance;          // Observer orbital radius
+
+    // Accretion disk appearance controls
+    float disk_density_vertical;
+    float disk_density_horizontal;
+    float disk_density_gain;
+    float disk_density_clamp;
+    float disk_noise_scale;
+    float disk_noise_speed;
+    int   disk_noise_octaves;
+    float disk_emission_strength;
+    float disk_alpha_falloff;
+    float disk_inner_multiplier;
+    float disk_inner_softness;
+    float disk_color_mix;
     
     // Scientific parameters (padding for alignment)
     int integration_method;
@@ -373,46 +378,92 @@ float calculateRealisticTemperature(float3 pos, float baseTemp) {
  * @param uniforms User-adjustable parameters
  */
 void diskRender(float3 pos, thread float4& color, thread float& alpha, float3 viewDir, float time, constant Uniforms& uniforms) {
-    float innerRadius = uniforms.black_hole_size * 25.0;  // Proportional to Schwarzschild radius
+    float innerMultiplier = max(uniforms.disk_inner_multiplier, 1.0);
+    float innerRadius = uniforms.black_hole_size * innerMultiplier;
     float outerRadius = uniforms.disk_radius;
+    float innerSoftness = max(uniforms.disk_inner_softness, 1.01);
 
     // Disk is in XZ plane at y=0
+    float diskThickness = max(uniforms.disk_thickness, 0.01);
     float yDisk = abs(pos.y);
-    float rDisk = length(float2(pos.x, pos.z));
+    float2 diskPos = float2(pos.x, pos.z);
+    float rDisk = length(diskPos);
     
+    float radiusSpan = max(outerRadius - innerRadius, 0.0001);
+    float radialNorm = clamp((rDisk - innerRadius) / radiusSpan, 0.0, 1.0);
+
     // Check if ray is within disk bounds
-    if (yDisk > uniforms.disk_thickness || rDisk < innerRadius || rDisk > outerRadius) {
+    if (yDisk > diskThickness || rDisk < innerRadius || rDisk > outerRadius) {
         return;
     }
     
-    // More realistic density falloff
-    float density = 1.0 - smoothstep(innerRadius, outerRadius, rDisk);
-    density *= pow(1.0 - yDisk / uniforms.disk_thickness, diskDensityV * 2.0);
-    density *= smoothstep(innerRadius, innerRadius * 1.2, rDisk);
+    float keplerFactor = pow(max(innerRadius / max(rDisk, innerRadius + 0.001), 0.001), 1.5);
+    float rotationRate = max(uniforms.disk_noise_speed * 2.2, 0.0);
+    float rotationAngle = time * rotationRate * keplerFactor;
+    float sA = sin(rotationAngle);
+    float cA = cos(rotationAngle);
+    float2 rotatedXZ = float2(diskPos.x * cA - diskPos.y * sA,
+                              diskPos.x * sA + diskPos.y * cA);
+    float3 advectedPos = float3(rotatedXZ.x, pos.y, rotatedXZ.y);
+    float angularPos = atan2(rotatedXZ.y, rotatedXZ.x);
 
-    if (density < 0.01) {
+    // Density model inspired by rossning92/Blackhole implementation
+    float density = 1.0 - smoothstep(innerRadius, outerRadius, rDisk);
+    float verticalNorm = clamp(1.0 - yDisk / diskThickness, 0.0, 0.999);
+    float verticalExp = max(uniforms.disk_density_vertical, 0.1);
+    density *= pow(verticalNorm, verticalExp);
+    density *= smoothstep(innerRadius, innerRadius * innerSoftness, rDisk);
+
+    if (density <= 0.0) {
         return;
     }
 
-    float3 sphericalCoord = toSpherical(pos);
+    float3 sphericalCoord = toSpherical(advectedPos);
     sphericalCoord.y *= 2.0;
     sphericalCoord.z *= 4.0;
 
-    density *= 1.0 / pow(sphericalCoord.x, diskDensityH);
-    density *= 16000.0;
+    float radialExp = max(uniforms.disk_density_horizontal, 0.1);
+    density *= 1.0 / pow(max(sphericalCoord.x, 0.001), radialExp);
+    density *= uniforms.disk_density_gain;
+    if (uniforms.disk_density_clamp > 0.0) {
+        density = clamp(density, 0.0, uniforms.disk_density_clamp);
+    }
+
+    float bandMix = clamp(radialNorm, 0.0, 1.0);
+    float primaryFreq = mix(12.0, 24.0, 1.0 - bandMix);
+    float secondaryFreq = mix(5.0, 11.0, 1.0 - bandMix);
+    float primaryPhase = angularPos * primaryFreq - rotationAngle * 1.6 + bandMix * 2.5;
+    float secondaryPhase = angularPos * secondaryFreq + rotationAngle * 0.85 + snoise(float3(rDisk * 0.1, pos.y * 3.0, time * 0.05)) * 2.0;
+    float ridge = sin(primaryPhase);
+    float valley = sin(secondaryPhase);
+    float laneMask = clamp(0.55 + 0.45 * ridge, 0.05, 1.0) * clamp(0.6 + 0.4 * valley, 0.05, 1.0);
+    laneMask = pow(laneMask, mix(1.5, 0.8, bandMix));
+    float bandNoise = 0.5 + 0.5 * snoise(float3(angularPos * 0.5, bandMix * 3.0, time * 0.15));
+    density *= mix(0.35, 1.25, laneMask * bandNoise);
 
     float noise = 1.0;
-    for (int i = 0; i < diskNoiseLOD; ++i) {
-        noise *= 0.5 * snoise(sphericalCoord * pow(float(i), 2.0) * diskNoiseScale) + 0.5;
-        if (i % 2 == 0) {
-            sphericalCoord.y -= time * diskSpeed;
-        } else {
-            sphericalCoord.y += time * diskSpeed;
-        }
+    int noiseOctaves = max(uniforms.disk_noise_octaves, 1);
+    float noiseScale = max(uniforms.disk_noise_scale, 0.001);
+    float noiseSpeed = uniforms.disk_noise_speed;
+    for (int i = 0; i < noiseOctaves; ++i) {
+        float octave = pow(float(i) + 1.0, 2.0);
+        float octaveSpeed = noiseSpeed * (1.0 + 0.18 * float(i));
+        noise *= 0.55 * snoise(sphericalCoord * octave * noiseScale) + 0.45;
+        float direction = (i % 2 == 0) ? -1.0 : 1.0;
+        sphericalCoord.y += direction * time * octaveSpeed * keplerFactor;
     }
+    
+    // Fine-grained particle detail
+    float microDetail = 0.5 + 0.5 * snoise(sphericalCoord * 18.0 * noiseScale + time * 0.3);
+    noise *= mix(0.85, 1.15, microDetail);
+
+    float3 tangentDir = normalize(float3(-advectedPos.z, 0.0, advectedPos.x));
+    float viewDot = clamp(dot(tangentDir, -normalize(viewDir)), -1.0, 1.0);
+    float relativisticLane = pow(clamp(1.0 + viewDot * 0.75, 0.25, 2.5), 3.0);
 
     float redshift = calculateRedShift(pos);
     float doppler = calculateDopplerEffect(pos, viewDir);
+    doppler = max(doppler, 0.2);
 
     float accretionTempMod = 7500.0;  // Base temperature
     accretionTempMod = calculateRealisticTemperature(pos, accretionTempMod);
@@ -423,9 +474,35 @@ void diskRender(float3 pos, thread float4& color, thread float& alpha, float3 vi
 
     // Apply beaming effect (relativistic intensity boost)
     float beaming = pow(doppler, 3.0);
-    
-    color += density * dustColor * alpha * abs(noise) * 0.3;
-    alpha *= (1.0 - density * abs(noise) * 0.3);
+
+    // Lensing flare near photon ring
+    float photonProximity = smoothstep(innerRadius * 1.5, innerRadius * 1.05, rDisk);
+    float lensingFlare = 1.0 + 1.8 * photonProximity * pow(clamp(viewDot * 0.5 + 0.5, 0.0, 1.0), 2.0);
+
+    float turbulent = clamp(abs(noise), 0.22, 1.7);
+    float beamingBoost = clamp(0.6 + (beaming - 1.0) * 0.65, 0.35, 1.95) * relativisticLane * lensingFlare;
+    float innerGlow = 1.0 + 2.8 * pow(1.0 - radialNorm, 2.6);
+    float rawDeposit = clamp(density * turbulent * uniforms.disk_emission_strength * beamingBoost * innerGlow, 0.0, 2.8);
+
+    if (rawDeposit <= 1e-4) {
+        return;
+    }
+
+    float mixFactor = clamp(uniforms.disk_color_mix, 0.0, 1.0);
+    float3 warmTint = float3(1.08 + 0.05 * viewDot, 0.92 + 0.06 * viewDot, 0.78 - 0.1 * viewDot);
+    float3 hotCore = float3(1.18, 1.1, 1.08);
+    float photonMix = smoothstep(0.0, 0.45, 1.0 - radialNorm);
+    float3 blendedColor = mix(hotCore, warmTint, 1.0 - photonMix);
+    float chromaMix = mixFactor * smoothstep(0.1, 1.0, radialNorm);
+    float3 diskColor = mix(blendedColor, dustColor.rgb, chromaMix);
+    float deposit = rawDeposit * alpha;
+    color.rgb += diskColor * deposit;
+    color.a = min(color.a + deposit, 1.0);
+
+    float alphaFalloff = clamp(uniforms.disk_alpha_falloff, 0.0, 1.0);
+    float attenuation = clamp(rawDeposit * alphaFalloff * (0.75 + 0.45 * (1.0 - radialNorm)), 0.0, 0.95);
+    alpha *= (1.0 - attenuation);
+    alpha = max(alpha, 0.0);
 }
 
 // Exact acceleration from repository
@@ -561,11 +638,24 @@ float4 rayMarch(float3 pos, float3 dir, float time, constant Uniforms& uniforms)
         }
     }
 
-    // Add background starfield
+    // Add animated background starfield
     float3 skyColor = float3(0.005, 0.01, 0.02);
     
-    // Add some procedural stars
-    float starNoise = snoise(dir * 50.0);
+    // Rotate starfield slowly over time
+    float starRotation = time * 0.02;
+    float cosR = cos(starRotation);
+    float sinR = sin(starRotation);
+    float3 animatedDir = float3(
+        dir.x * cosR - dir.z * sinR,
+        dir.y,
+        dir.x * sinR + dir.z * cosR
+    );
+    
+    // Drift starfield with subtle parallax
+    float3 driftedDir = animatedDir + float3(time * 0.005, time * 0.003, 0.0);
+    
+    // Add procedural stars with motion
+    float starNoise = snoise(driftedDir * 50.0);
     if (starNoise > 0.8) {
         float3 starColor = float3(0.8, 0.9, 1.0) * (starNoise - 0.8) * 5.0;
         
@@ -577,8 +667,8 @@ float4 rayMarch(float3 pos, float3 dir, float time, constant Uniforms& uniforms)
         skyColor += starColor;
     }
     
-    // Add subtle color variation to space
-    skyColor *= (1.0 + 0.3 * snoise(dir * 5.0));
+    // Add subtle animated color variation to space
+    skyColor *= (1.0 + 0.3 * snoise(driftedDir * 5.0 + time * 0.1));
     
     color += float4(skyColor, 1.0) * (1.0 - color.a);
     color.a = 1.0;

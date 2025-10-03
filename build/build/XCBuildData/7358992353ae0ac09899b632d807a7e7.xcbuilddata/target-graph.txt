@@ -1,4 +1,8 @@
-Target dependency graph (3 targets)
+Target dependency graph (4 targets)
+Target 'ALL_BUILD' in project 'BlackHoleGPU'
+➜ Explicit dependency on target 'ZERO_CHECK' in project 'BlackHoleGPU'
+➜ Explicit dependency on target 'BlackHole' in project 'BlackHoleGPU'
+➜ Explicit dependency on target 'glfw' in project 'BlackHoleGPU'
 Target 'BlackHole' in project 'BlackHoleGPU'
 ➜ Explicit dependency on target 'ZERO_CHECK' in project 'BlackHoleGPU'
 ➜ Explicit dependency on target 'glfw' in project 'BlackHoleGPU'

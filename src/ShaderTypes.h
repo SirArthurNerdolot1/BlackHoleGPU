@@ -70,6 +70,20 @@ typedef struct
     float disk_thickness;           // Vertical thickness of accretion disk
     float black_hole_size;          // Schwarzschild radius (event horizon size)
     float camera_distance;          // Observer orbital radius
+
+    // Accretion disk appearance controls (visual presets)
+    float disk_density_vertical;    // Vertical density falloff exponent
+    float disk_density_horizontal;  // Radial density falloff exponent
+    float disk_density_gain;        // Overall density multiplier
+    float disk_density_clamp;       // Maximum density clamp (<=0 disables)
+    float disk_noise_scale;         // Turbulence scale factor
+    float disk_noise_speed;         // Turbulence rotation speed
+    int   disk_noise_octaves;       // Number of noise octaves
+    float disk_emission_strength;   // Brightness multiplier for disk emission
+    float disk_alpha_falloff;       // Opacity falloff factor per step
+    float disk_inner_multiplier;    // Inner radius multiplier relative to Rs
+    float disk_inner_softness;      // Width of inner falloff region
+    float disk_color_mix;           // Blend factor between warm tint and blackbody color
     
     // Scientific parameters
     int integration_method;         // Geodesic integration: 0=Verlet, 1=RK4

@@ -85,6 +85,33 @@ private:
     void* _pPSO;                    // MTLComputePipelineState* - compiled shader pipeline
     void* _pMetalLayer;             // CAMetalLayer* - drawable presentation layer
 
+    // Post-processing pipeline states
+    void* _bloomBrightnessPSO;      // MTLComputePipelineState* - bloom brightness extraction
+    void* _bloomDownsamplePSO;      // MTLComputePipelineState* - bloom downsample
+    void* _bloomUpsamplePSO;        // MTLComputePipelineState* - bloom upsample
+    void* _bloomCompositePSO;       // MTLComputePipelineState* - bloom composite
+    void* _tonemappingPSO;          // MTLComputePipelineState* - ACES tone mapping
+    
+    // Post-processing textures
+    void* _sceneTexture;            // MTLTexture* - main scene render target
+    void* _brightnessTexture;       // MTLTexture* - bright pixels for bloom
+    void* _bloomDownsample[8];      // MTLTexture* - bloom downsample pyramid
+    void* _bloomUpsample[8];        // MTLTexture* - bloom upsample pyramid
+    void* _bloomFinalTexture;       // MTLTexture* - final combined bloom
+    void* _finalTexture;            // MTLTexture* - after tone mapping
+    int   _ppWidth;                 // Width of post-processing textures
+    int   _ppHeight;                // Height of post-processing textures
+    int   _allocatedBloomIterations;// Number of bloom mip levels allocated
+    bool  _postProcessDirty;        // Post-processing resources need rebuild
+    
+    // Post-processing parameters
+    float _bloomStrength;           // Bloom intensity
+    float _bloomThreshold;          // Brightness threshold for bloom
+    int _bloomIterations;           // Number of bloom mip levels
+    float _tonemapGamma;            // Gamma correction value
+    bool _tonemappingEnabled;       // Enable/disable tone mapping
+    bool _bloomEnabled;             // Enable/disable bloom effect
+
     Uniforms _uniforms;             // Shared GPU/CPU uniform buffer (see ShaderTypes.h)
     
     // Performance tracking
@@ -102,11 +129,19 @@ private:
     // GUI state
     int _currentTab;                // Active GUI tab (0=Physics, 1=Visual, 2=Camera, 3=Recording)
     int _currentPreset;             // Selected quality preset
+    int _currentVisualPreset;       // Selected visual preset for accretion disk
     
     // Helper methods
     void updatePerformanceMetrics();
     void applyQualityPreset(int preset);
+    void applyVisualPreset(int preset);
     void startRecording(const char* filename);
     void stopRecording();
     void captureFrame();
+    
+    // Post-processing methods
+    void initializePostProcessing();
+    void createPostProcessingTextures(int width, int height);
+    void applyBloomEffect(void* commandBuffer, void* inputTexture, void* outputTexture);
+    void applyToneMapping(void* commandBuffer, void* inputTexture, void* outputTexture);
 };

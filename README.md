@@ -22,6 +22,9 @@ A real-time, scientifically accurate black hole visualization using GPU-accelera
 - **Procedural Turbulence**: Multi-octave simplex noise for disk dynamics
 - **Background Stars**: Procedural starfield with gravitational redshift
 - **Orbiting Star**: Dynamic orbital mechanics with proper physics
+- **Rossning Visual Presets**: One-click looks inspired by rossning92/Blackhole with tuned bloom and tone mapping
+- **HDR Bloom Pipeline**: Adjustable highlight threshold, blur iterations (1-8), and strength for cinematic glow
+- **ACES Tone Mapping**: Toggle filmic tone mapping and dial gamma correction (1.0 - 4.0)
 
 ### Performance Optimization
 - **Quality Presets**: Low/Medium/High/Ultra (2-6x FPS improvement)
@@ -44,8 +47,12 @@ Modern tabbed interface with organized controls:
 - Quick presets: Gargantua, Extreme Gravity, Thin Disk
 
 **Visual Tab**:
+- Rossning visual preset selector (Default / Particle Storm / Minimal Bloom)
+- Accretion disk controls (density falloff, emission strength, turbulence, color mix)
 - Background redshift toggle
 - Background Doppler shift toggle
+- Bloom controls (enable, strength, highlight threshold, quality/iterations)
+- Tone mapping controls (enable toggle with gamma slider 1.0 - 4.0)
 - Orbiting star controls (radius, speed, brightness)
 - Advanced rendering settings (iterations, step size, adaptive stepping)
 
@@ -151,6 +158,7 @@ Try these preset buttons in the Physics tab:
 - **Performance**: Lower quality preset if FPS drops below 10
 - **Screenshots**: Set quality to Ultra before capturing (Cmd+Shift+4)
 - **Recording**: Use macOS screen recording (Cmd+Shift+5) with Ultra quality
+- **Post-Processing**: In the Visual tab, increase Bloom Quality (iterations) for softer glow, tweak strength/threshold, and fine-tune ACES tone mapping with the Gamma slider
 
 ## Physics Implementation
 

@@ -8,13 +8,21 @@
 		<data>
 		sADqcg2UeB7QVFqobJSwfNusrTY=
 		</data>
+		<key>Resources/bloom_brightness.dat</key>
+		<data>
+		lj+s1Ve28MT5s844R6wq6l4zY4I=
+		</data>
 		<key>Resources/default.metallib</key>
 		<data>
-		mGB05ZyMz2Xfuab+SZ4Xpcyx9oU=
+		XwR+rMWgB0cujJHPnaFHOms/a7w=
 		</data>
 		<key>Resources/imgui.ini</key>
 		<data>
-		p+TONAAboEvOG70Wj0ucdYRRLpw=
+		rxqaVJ+w4DalOJ7/miXc6yidPe8=
+		</data>
+		<key>Resources/tonemapping.dat</key>
+		<data>
+		7jyc9NrKaTuaR2mVnmw+JJpWmlI=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -26,18 +34,32 @@
 			I7wm9d853KsdpIN0m/OuJUiWAP28o3UaN0GCPWzgma4=
 			</data>
 		</dict>
+		<key>Resources/bloom_brightness.dat</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			PRG9lFnmIflg9NpIhHxYL89OIo1iqCR+ocvqkd4I73E=
+			</data>
+		</dict>
 		<key>Resources/default.metallib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Hvh+UBDJNTA39yNY0rSLtzXp18Mv5ZvJG0FsXXftSRE=
+			8fvSwRKsSeGQzMyadMZqC42p2gX8Li7DJuN+JKKALaY=
 			</data>
 		</dict>
 		<key>Resources/imgui.ini</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			5Q76pC0BuBDdhkm0jnUFpMZsT6PFHD7riexTBE8FjyY=
+			dBid+u/tArYsN6ZjqFlZFZHl9QjxiSY02EomFqJefUM=
+			</data>
+		</dict>
+		<key>Resources/tonemapping.dat</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			ZJDk4OXHvq4PG4GYp8huUL15miDDf861ODDS9YaAQLA=
 			</data>
 		</dict>
 	</dict>
