@@ -99,6 +99,8 @@ private:
     void* _bloomUpsample[8];        // MTLTexture* - bloom upsample pyramid
     void* _bloomFinalTexture;       // MTLTexture* - final combined bloom
     void* _finalTexture;            // MTLTexture* - after tone mapping
+    void* _diskColorMap;            // MTLTexture* - accretion disk color gradient
+    
     int   _ppWidth;                 // Width of post-processing textures
     int   _ppHeight;                // Height of post-processing textures
     int   _allocatedBloomIterations;// Number of bloom mip levels allocated

@@ -1,0 +1,10 @@
+# Hashes of file build rules.
+bc688dda292ad48c931a31909016a695 BlackHole.air
+6fa1ab345a5d81bc6654299abaa23082 CMakeFiles/metal_lib
+5db26dd8b08ef66575dccb4ac5325c72 ParticleSystem.air
+89e4536a79193da97976be051646d6a7 ParticleTrails.air
+9c0fb0c4b36e8135d2428aff0d576062 bloom_brightness.air
+0396b8908097fd982f4dd0017136c75c default.metallib
+a3a79a0047a97db96e04ebd321a40b29 tonemapping.air
+6ddb1abba5fc5d5b3d7ccd264696d253 vendor/glfw/CMakeFiles/uninstall
+de95ac9c4cef31ee956c0ef6572736f5 vendor/glfw/src/CMakeFiles/update_mappings

@@ -67,6 +67,8 @@ set_source_files_properties(
     shaders/BlackHole.metal
     shaders/bloom_brightness.metal  
     shaders/tonemapping.metal
+    shaders/ParticleSystem.metal
+    shaders/ParticleTrails.metal
     PROPERTIES 
     MACOSX_PACKAGE_LOCATION "Resources"
     COMPILE_FLAGS "-I${CMAKE_CURRENT_SOURCE_DIR}/src")
@@ -75,6 +77,47 @@ target_sources(BlackHole PRIVATE
     shaders/BlackHole.metal
     shaders/bloom_brightness.metal
     shaders/tonemapping.metal
+    shaders/ParticleSystem.metal
+    shaders/ParticleTrails.metal
+)
+
+# --- Compile all Metal shaders into a single default.metallib ---
+set(METAL_SHADERS
+    shaders/BlackHole.metal
+    shaders/bloom_brightness.metal
+    shaders/tonemapping.metal
+    shaders/ParticleSystem.metal
+    shaders/ParticleTrails.metal
+)
+
+set(METAL_AIRS)
+foreach(SHADER ${METAL_SHADERS})
+    get_filename_component(SHADER_NAME ${SHADER} NAME_WE)
+    set(AIR_FILE ${CMAKE_BINARY_DIR}/${SHADER_NAME}.air)
+    add_custom_command(
+        OUTPUT ${AIR_FILE}
+        COMMAND xcrun -sdk macosx metal -c ${CMAKE_SOURCE_DIR}/${SHADER} -o ${AIR_FILE}
+        DEPENDS ${SHADER}
+        COMMENT "Compiling ${SHADER} to AIR"
+    )
+    list(APPEND METAL_AIRS ${AIR_FILE})
+endforeach()
+
+add_custom_command(
+    OUTPUT ${CMAKE_BINARY_DIR}/default.metallib
+    COMMAND xcrun -sdk macosx metallib ${METAL_AIRS} -o ${CMAKE_BINARY_DIR}/default.metallib
+    DEPENDS ${METAL_AIRS}
+    COMMENT "Linking all AIR files into default.metallib"
+)
+
+add_custom_target(metal_lib ALL DEPENDS ${CMAKE_BINARY_DIR}/default.metallib)
+add_dependencies(BlackHole metal_lib)
+
+# Copy default.metallib into the app bundle Resources
+add_custom_command(TARGET BlackHole POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E copy_if_different
+        ${CMAKE_BINARY_DIR}/default.metallib
+        $<TARGET_FILE_DIR:BlackHole>/../Resources/default.metallib
 )
 
 # --- macOS Bundle Configuration ---

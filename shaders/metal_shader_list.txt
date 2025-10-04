@@ -1,0 +1,5 @@
+shaders/BlackHole.metal
+shaders/bloom_brightness.metal
+shaders/tonemapping.metal
+shaders/ParticleSystem.metal
+shaders/ParticleTrails.metal

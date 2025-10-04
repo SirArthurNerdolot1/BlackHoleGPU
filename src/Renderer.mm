@@ -42,8 +42,8 @@ Renderer::Renderer(GLFWwindow* pWindow) : _pWindow(pWindow),
     _lastFrameTime(0.0), _currentFPS(0.0f), _frameTimeMs(0.0f),
     _isRecording(false), _videoWriter(nullptr), _videoInput(nullptr),
     _pixelBufferAdaptor(nullptr), _recordedFrames(0),
-    _currentTab(0), _currentPreset(2), _currentVisualPreset(0),
-    _bloomStrength(0.08f), _bloomThreshold(1.2f), _bloomIterations(5),
+    _currentTab(0), _currentPreset(0), _currentVisualPreset(0),
+    _bloomStrength(0.08f), _bloomThreshold(1.2f), _bloomIterations(3),
     _tonemapGamma(2.2f), _tonemappingEnabled(true), _bloomEnabled(true),
     _ppWidth(0), _ppHeight(0), _allocatedBloomIterations(0), _postProcessDirty(true)
 {
@@ -88,6 +88,7 @@ Renderer::Renderer(GLFWwindow* pWindow) : _pWindow(pWindow),
     _uniforms.disk_inner_multiplier = 25.0f;
     _uniforms.disk_inner_softness = 1.1f;
     _uniforms.disk_color_mix = 0.65f;
+
 
     applyVisualPreset(_currentVisualPreset);
 
@@ -152,6 +153,73 @@ Renderer::Renderer(GLFWwindow* pWindow) : _pWindow(pWindow),
     
     // Initialize post-processing pipelines
     initializePostProcessing();
+    
+    // Create procedural accretion disk color map texture
+    // This gradient represents temperature from inner (hot/blue-white) to outer (cooler/orange-red) disk
+    @autoreleasepool {
+        const int colorMapWidth = 256;
+        const int colorMapHeight = 1;
+        
+        MTLTextureDescriptor* colorMapDesc = [MTLTextureDescriptor texture2DDescriptorWithPixelFormat:MTLPixelFormatRGBA8Unorm
+                                                                                                width:colorMapWidth
+                                                                                               height:colorMapHeight
+                                                                                            mipmapped:NO];
+        colorMapDesc.usage = MTLTextureUsageShaderRead;
+        id<MTLTexture> colorMapTexture = [device newTextureWithDescriptor:colorMapDesc];
+        
+        // Generate temperature gradient: inner disk (hot) to outer disk (cooler)
+        // Based on accretion disk temperature profile
+        uint8_t* colorData = new uint8_t[colorMapWidth * 4];
+        for (int x = 0; x < colorMapWidth; x++) {
+            float t = (float)x / (float)(colorMapWidth - 1);
+            
+            // Temperature gradient from hot inner disk to cooler outer disk
+            // Inner: blue-white (very hot plasma)
+            // Middle: orange-yellow (moderate temperature)
+            // Outer: deep red-orange (cooler gas)
+            
+            float r, g, b;
+            if (t < 0.3f) {
+                // Hot inner region: blue-white to white
+                float localT = t / 0.3f;
+                r = 0.8f + 0.2f * localT;
+                g = 0.85f + 0.15f * localT;
+                b = 1.0f;
+            } else if (t < 0.6f) {
+                // Transition: white to yellow-orange
+                float localT = (t - 0.3f) / 0.3f;
+                r = 1.0f;
+                g = 1.0f - 0.2f * localT;
+                b = 1.0f - 0.5f * localT;
+            } else {
+                // Outer region: orange to deep red
+                float localT = (t - 0.6f) / 0.4f;
+                r = 1.0f - 0.2f * localT;
+                g = 0.8f - 0.5f * localT;
+                b = 0.5f - 0.3f * localT;
+            }
+            
+            // Apply slight exponential curve for more natural falloff
+            r = powf(r, 0.9f);
+            g = powf(g, 1.0f);
+            b = powf(b, 1.1f);
+            
+            colorData[x * 4 + 0] = (uint8_t)(r * 255.0f);
+            colorData[x * 4 + 1] = (uint8_t)(g * 255.0f);
+            colorData[x * 4 + 2] = (uint8_t)(b * 255.0f);
+            colorData[x * 4 + 3] = 255;
+        }
+        
+        [colorMapTexture replaceRegion:MTLRegionMake2D(0, 0, colorMapWidth, colorMapHeight)
+                            mipmapLevel:0
+                              withBytes:colorData
+                            bytesPerRow:colorMapWidth * 4];
+        
+        delete[] colorData;
+        
+        _diskColorMap = (__bridge_retained void*)colorMapTexture;
+        std::cout << "Disk color map texture created successfully (" << colorMapWidth << "x" << colorMapHeight << ")" << std::endl;
+    }
 }
 
 void Renderer::initializePostProcessing()
@@ -327,6 +395,7 @@ void Renderer::createPostProcessingTextures(int width, int height)
     }
 }
 
+
 Renderer::~Renderer()
 {
     // Stop recording if active
@@ -346,6 +415,7 @@ Renderer::~Renderer()
     releaseObj(_brightnessTexture);
     releaseObj(_bloomFinalTexture);
     releaseObj(_finalTexture);
+    releaseObj(_diskColorMap);
     for (int i = 0; i < 8; ++i) {
         releaseObj(_bloomDownsample[i]);
         releaseObj(_bloomUpsample[i]);
@@ -625,13 +695,17 @@ void Renderer::draw()
             return;
         }
 
-        // 1. Black Hole Compute Pass -> render into HDR scene texture
+        // ...existing code...
+
+        // 2. Black Hole Compute Pass -> render into HDR scene texture
         {
             id<MTLComputePipelineState> pso = (__bridge id<MTLComputePipelineState>)_pPSO;
             id<MTLTexture> sceneTex = (__bridge id<MTLTexture>)_sceneTexture;
+            id<MTLTexture> colorMap = (__bridge id<MTLTexture>)_diskColorMap;
             id<MTLComputeCommandEncoder> pEnc = [pCmd computeCommandEncoder];
             [pEnc setComputePipelineState:pso];
             [pEnc setTexture:sceneTex atIndex:0];
+            [pEnc setTexture:colorMap atIndex:1];  // Bind color map for accretion disk
 
             _uniforms.time += 0.01f;
             _uniforms.resolution = {(float)sceneTex.width, (float)sceneTex.height};
@@ -646,7 +720,9 @@ void Renderer::draw()
             [pEnc endEncoding];
         }
 
-        // 2. Bloom (optional) -> writes to _bloomFinalTexture
+        // ...existing code...
+
+        // 4. Bloom (optional) -> writes to _bloomFinalTexture
         {
             id<MTLTexture> sceneTex = (__bridge id<MTLTexture>)_sceneTexture;
             id<MTLTexture> bloomOut = (__bridge id<MTLTexture>)_bloomFinalTexture;
@@ -1031,6 +1107,8 @@ void Renderer::draw()
                     ImGui::EndTabItem();
                 }
                 
+                // ...existing code...
+                
                 ImGui::EndTabBar();
             }
             
@@ -1168,3 +1246,8 @@ void Renderer::applyToneMapping(void* commandBuffer, void* inputTexture, void* o
     dispatchForTexture(pso, enc, dst);
     [enc endEncoding];
 }
+
+
+
+
+

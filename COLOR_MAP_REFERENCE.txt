@@ -1,0 +1,43 @@
+// Quick Reference: Accretion Disk Color Map Gradient
+// ===================================================
+//
+// This file documents the procedural color gradient used for the accretion disk.
+// The gradient is a 256x1 texture that maps radial distance (0.0 = inner, 1.0 = outer)
+// to temperature-based colors.
+//
+// Position Range | Color        | RGB Values           | Temperature Analogy
+// ---------------|--------------|----------------------|--------------------
+// 0.0 - 0.3      | Blue-White   | (204, 217, 255)      | ~20,000K (Hot plasma)
+//                | to White     | → (255, 255, 255)    |
+//                |              |                      |
+// 0.3 - 0.6      | White        | (255, 255, 255)      | ~15,000K (Very hot)
+//                | to Yellow    | → (255, 230, 128)    |
+//                |              |                      |
+// 0.6 - 1.0      | Orange       | (255, 204, 128)      | ~10,000K (Moderate)
+//                | to Deep Red  | → (204, 77, 51)      | ~5,000K (Cooler)
+//
+// Usage in Shader:
+// ---------------
+// float radialNorm = (distance - innerRadius) / (outerRadius - innerRadius);
+// float4 color = diskColorMap.sample(colorSampler, float2(radialNorm, 0.5));
+//
+// Blending:
+// --------
+// The color can be blended with physics-based blackbody radiation:
+//   float3 finalColor = mix(blackbodyColor, colorMapColor, disk_color_mix);
+//
+// Where disk_color_mix ranges from:
+//   0.0 = Pure blackbody (physically accurate)
+//   0.65 = Default balanced blend
+//   1.0 = Pure color map (artistic)
+//
+// Visual Effect:
+// -------------
+// Inner disk: Hot blue-white core (approaching photon sphere)
+// Mid disk: Yellow-orange transition zone (stable orbits)
+// Outer disk: Deep red-orange fade (cool outer regions)
+//
+// This gradient creates a visually striking appearance similar to the
+// rossning92/Blackhole reference implementation while maintaining the
+// option for physics-based rendering.
+
